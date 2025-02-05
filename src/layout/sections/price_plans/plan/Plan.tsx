@@ -29,7 +29,8 @@ export const Plan = (props: PlanPropsType) => {
 };
 
 const StyledPlan = styled.div`
-    width: 30%;
+    max-width: 310px;
+    width: 100%;
     background-color: lightpink;
 `;
 

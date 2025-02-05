@@ -1,32 +1,55 @@
 import styled from "styled-components";
 import {SectionTitle} from "../SectionTitle.tsx";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
+import {Button} from "../../../components/Button.tsx";
 
 export const LeaveInfo = () => {
     return (
         <StyledLeaveInfo>
             <SectionTitle>Leave Us Your Info</SectionTitle>
             <StyledForm>
-                <FlexWrapper direction={'column'} justify={'space-between'}>
-                    <div>Your full name (Required)</div>
-                    <input type={'text'}/>
-                    <div>Your email (Required)</div>
-                    <input type={'text'}/>
-                    <div>Subject</div>
-                    <input type={'text'}/>
-                    <div>Your message</div>
-                    <textarea/>
-                    <input type={'button'} value={'Send Message'}></input>
+                <FlexWrapper direction={'column'}>
+                    <Label htmlFor={'full_name'}>Your full name (Required)</Label>
+                    <Field id={'full_name'}/>
                 </FlexWrapper>
+                <FlexWrapper direction={'column'}>
+                    <Label htmlFor={'email'}>Your email (Required)</Label>
+                    <Field id={'email'}/>
+                </FlexWrapper>
+                <FlexWrapper direction={'column'}>
+                    <Label htmlFor={'subject'}>Subject</Label>
+                    <Field id={'subject'}/>
+                </FlexWrapper>
+                <FlexWrapper direction={'column'}>
+                    <Label htmlFor={'message'}>Your message</Label>
+                    <Field as={"textarea"} id={'message'}/>
+                </FlexWrapper>
+                <Button type={"submit"}>Send Message</Button>
             </StyledForm>
         </StyledLeaveInfo>
     );
 };
 
 const StyledLeaveInfo = styled.section`
-    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 50vh;
+    background-color: aliceblue;
+    max-width: 570px;
+    width: 100%;
 `;
 
 const StyledForm = styled.form`
-    
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 20px;
+`;
+
+const Label = styled.label`
+    display: block;
+`;
+
+const Field = styled.input`
 `;

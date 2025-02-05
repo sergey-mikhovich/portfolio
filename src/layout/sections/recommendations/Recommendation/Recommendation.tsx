@@ -34,7 +34,8 @@ export const Recommendation = (props: RecommendationsPropsType) => {
 };
 
 const StyledRecommendation = styled.div`
-    width: 30%;
+    max-width: 310px;
+    width: 100%;
     background-color: antiquewhite;
     border: solid black;
 `;

@@ -22,12 +22,13 @@ export const PhotoCard = (props: PhotoCardPropsType) => {
 };
 
 const StyledPhotoCard = styled.div`
-    width: 30%;
+    max-width: 310px;
+    width: 100%;
     border: solid 1px black;
 `;
 
 const Photo = styled.img`
-    width: 300px;
+    width: 100%;
     height: 300px;
     object-fit: cover;
 `;

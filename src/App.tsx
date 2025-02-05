@@ -11,10 +11,13 @@ import {Footer} from "./layout/footer/Footer.tsx";
 import {ContactInfo} from "./layout/sections/contact_info/ContactInfo.tsx";
 import {FlexWrapper} from "./components/FlexWrapper.tsx";
 import {LeaveInfo} from "./layout/sections/leave_info/LeaveInfo.tsx";
+import {NavigationSidebar} from "./layout/sidebars/navigation/NavigationSidebar.tsx";
+import {ProfileSidebar} from "./layout/sidebars/profile/ProfileSidebar.tsx";
 
-function App() {
+export default function App() {
     return (
         <div className="App">
+            {/*<ProfileSidebar/>*/}
             <Main/>
             <Services/>
             <PricePlans/>
@@ -23,13 +26,13 @@ function App() {
             <WorkHistory/>
             <Portfolio/>
             <Blog/>
-            <FlexWrapper justify={'space-around'}>
+            <FlexWrapper justify={'space-evenly'} wrap={"wrap"}>
                 <LeaveInfo/>
                 <ContactInfo/>
             </FlexWrapper>
             <Footer/>
+            {/*<NavigationSidebar/>*/}
         </div>
     )
 }
 
-export default App

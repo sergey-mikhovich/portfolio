@@ -35,5 +35,9 @@ export const ContactInfo = () => {
 };
 
 const StyledContactInfo = styled.section`
-    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 370px;
+    width: 100%;
 `;

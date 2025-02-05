@@ -23,5 +23,4 @@ export const ActivityProgram = (props: ActivityProgramPropsType) => {
 };
 
 const StyledActivityProgram = styled.div`
-    
 `;

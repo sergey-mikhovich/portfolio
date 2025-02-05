@@ -7,7 +7,7 @@ export const Footer = () => {
     return (
         <StyledFooter>
             <StyledMap src={imgMap} alt={'map'}></StyledMap>
-            <FlexWrapper justify="space-between">
+            <FlexWrapper justify="space-evenly">
                 <Icon iconId={'footerLogo1'} width={'140px'} viewBox={'0 0 140 140'}/>
                 <Icon iconId={'footerLogo2'} width={'140px'} viewBox={'0 0 140 140'}/>
                 <Icon iconId={'footerLogo3'} width={'140px'} viewBox={'0 0 140 140'}/>
@@ -15,7 +15,7 @@ export const Footer = () => {
             </FlexWrapper>
             <FlexWrapper justify={'center'}>
                 <Icon iconId={'copyright'}/>
-                <span>2025 All Right Reserved.</span>
+                <Copyright>@ 2025 Sergey Mikhovich. All Rights Reserved.</Copyright>
             </FlexWrapper>
         </StyledFooter>
     );
@@ -27,4 +27,8 @@ const StyledFooter = styled.footer`
 
 const StyledMap = styled.img`
     max-width: calc(100vw - (100vw - 100%));
+`;
+
+const Copyright = styled.small`
+    
 `;

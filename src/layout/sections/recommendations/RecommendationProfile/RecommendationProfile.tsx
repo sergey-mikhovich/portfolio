@@ -23,7 +23,8 @@ export const RecommendationProfile = (props: RecommendationProfilePropsType) => 
 
 const StyledAvatar = styled.img`
     border-radius: 50%;
-    width: 80px;
+    max-width: 80px;
+    width: 100%;
     height: 80px;
 `;
 

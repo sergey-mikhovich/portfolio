@@ -9,7 +9,7 @@ export const PricePlans = () => {
         <StyledPricePlans>
             <SectionTitle>Price Plans</SectionTitle>
             <SectionDescription>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. lorem ipsum</SectionDescription>
-            <FlexWrapper justify={'space-around'}>
+            <FlexWrapper justify={'space-evenly'} wrap={'wrap'}>
                 <Plan mostPopular={false}
                       title={'Silver'}
                       price={'0.00'}

@@ -19,7 +19,8 @@ export const Service = (props: ServicePropsType) => {
 
 
 export const StyledSkill = styled.div`
-    width: 30%;
+    max-width: 310px;
+    width: 100%;
     background-color: lightgreen;
     border: solid black;
 `;

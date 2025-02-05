@@ -19,6 +19,8 @@ export const Main = () => {
 };
 
 const StyledMain = styled.section`
+    display: flex;
+    align-items: center;
     min-height: 100vh;
     background-color: #f0f0f6;
 `;

@@ -15,19 +15,21 @@ type ContactInfoPropsType = {
 export const ContactCard = (props: ContactInfoPropsType) => {
     return (
         <StyledContactCard>
-            <FlexWrapper direction={"column"} justify={'center'}>
-                <Icon iconId={props.iconId} width={'40px'} viewBox={'0 0 40 40'}/>
-                {props.records.map((record: RecordPropsType) => (
-                    <FlexWrapper justify={'space-between'}>
-                        <span>{record.name}:</span>
-                        <span>{record.value}</span>
-                    </FlexWrapper>
-                ))}
-            </FlexWrapper>
+            <Icon iconId={props.iconId} width={'40px'} viewBox={'0 0 40 40'}/>
+            {props.records.map((record: RecordPropsType) => (
+                <FlexWrapper justify={'space-between'}>
+                    <span>{record.name}:</span>
+                    <span>{record.value}</span>
+                </FlexWrapper>
+            ))}
         </StyledContactCard>
     );
 };
 
 const StyledContactCard = styled.div`
-    
+    width: 100%;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 `;
