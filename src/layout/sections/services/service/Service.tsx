@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import {Icon} from "../../../../components/icon/Icon.tsx";
+import {theme} from "../../../../slyles/Theme.ts";
+import {FlexWrapper} from "../../../../components/FlexWrapper.tsx";
 
 type ServicePropsType = {
     iconId: string
@@ -10,9 +12,11 @@ type ServicePropsType = {
 export const Service = (props: ServicePropsType) => {
     return (
         <StyledSkill>
-            <Icon iconId={props.iconId} />
-            <Title>{props.title}</Title>
-            <Description>{props.description}</Description>
+            <FlexWrapper direction={"column"} align={"center"} wrap={"wrap"}>
+                <Icon iconId={props.iconId} width={"74px"} viewBox={"0 0 74 74"}/>
+                <Title>{props.title}</Title>
+                <Description>{props.description}</Description>
+            </FlexWrapper>
         </StyledSkill>
     );
 };
@@ -21,14 +25,19 @@ export const Service = (props: ServicePropsType) => {
 export const StyledSkill = styled.div`
     max-width: 310px;
     width: 100%;
-    background-color: lightgreen;
-    border: solid black;
+    min-height: 225px;
+    background-color: ${theme.colors.primaryBg};
+    padding: 30px 25px 40px;
 `;
 
 const Title = styled.h3`
-    
+    font-weight: 500;
+    font-size: 18px;
+    padding: 25px 0 15px;
 `;
 
 const Description = styled.p`
-    
+    font-size: 15px;
+    line-height: 24px;
+    color: ${theme.colors.secondaryFont};
 `;

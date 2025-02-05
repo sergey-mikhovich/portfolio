@@ -53,6 +53,5 @@ export const Recommendations = () => {
 const StyledRecommendations = styled.section`
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
     background-color: #f0f0f6;
 `;

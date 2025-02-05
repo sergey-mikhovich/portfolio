@@ -60,6 +60,5 @@ export const PricePlans = () => {
 };
 
 const StyledPricePlans = styled.section`
-    min-height: 100vh;
     background-color: #f0f0f6;
 `;

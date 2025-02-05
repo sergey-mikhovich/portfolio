@@ -33,7 +33,6 @@ export const Education = () => {
 };
 
 const StyledEducation = styled.section`
-    min-height: 100vh;
     background-color: #f0f0f6;
 `;
 

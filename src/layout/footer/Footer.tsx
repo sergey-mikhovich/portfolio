@@ -7,7 +7,7 @@ export const Footer = () => {
     return (
         <StyledFooter>
             <StyledMap src={imgMap} alt={'map'}></StyledMap>
-            <FlexWrapper justify="space-evenly">
+            <FlexWrapper justify="space-evenly" wrap={"wrap"}>
                 <Icon iconId={'footerLogo1'} width={'140px'} viewBox={'0 0 140 140'}/>
                 <Icon iconId={'footerLogo2'} width={'140px'} viewBox={'0 0 140 140'}/>
                 <Icon iconId={'footerLogo3'} width={'140px'} viewBox={'0 0 140 140'}/>

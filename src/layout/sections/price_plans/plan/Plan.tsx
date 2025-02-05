@@ -21,9 +21,9 @@ export const Plan = (props: PlanPropsType) => {
                 {props.packageItems.map(item => (
                     <PackageItem included={item.included} text={item.text}/>
                 ))}
-            </FlexWrapper>
 
-            <StyledButton backgroundColor={props.mostPopular ? 'orange' : ''}>Order Now</StyledButton>
+                <StyledButton backgroundColor={props.mostPopular ? 'orange' : ''}>Order Now</StyledButton>
+            </FlexWrapper>
         </StyledPlan>
     );
 };
