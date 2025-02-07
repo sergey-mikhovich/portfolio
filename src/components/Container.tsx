@@ -8,4 +8,9 @@ export const Container = styled.div`
     margin: 0 auto;
     //margin: 0 auto 0 335px;
     //outline: 1px solid red;
+    
+    @media screen and (max-width: 768px) {
+        padding: 0 15px;
+    }
 `
+

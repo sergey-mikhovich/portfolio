@@ -10,7 +10,7 @@ export const CompoundFeedback = () => {
     return (
         <StyledCompoundFeedback>
             <Container>
-                <FlexWrapper gap={"30px"} wrap={"wrap"} justify={"center"}>
+                <FlexWrapper gap={"30px"} wrap={"wrap"} justify={"space-around"}>
                     <LeaveInfo/>
                     <ContactInfo/>
                 </FlexWrapper>

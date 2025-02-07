@@ -19,7 +19,7 @@ export const Recommendations = () => {
                 <FlexWrapper direction="column" align={"center"}>
                     <SectionTitle>Recommendations</SectionTitle>
                     <SectionDescription>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. lorem ipsum</SectionDescription>
-                    <FlexWrapper justify={'center'} wrap={'wrap'} gap={"20px"}>
+                    <FlexWrapper justify={'space-around'} wrap={'wrap'} gap={"20px"}>
                         <Recommendation icons={stars}
                                         title={'Great Quality'}
                                         description={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nulla diam in ac dictum a urna viverra morbi. Morbi donec amet....'}

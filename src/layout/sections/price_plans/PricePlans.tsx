@@ -13,7 +13,7 @@ export const PricePlans = () => {
                 <FlexWrapper direction="column" align={"center"}>
                     <SectionTitle>Price Plans</SectionTitle>
                     <SectionDescription>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. lorem ipsum</SectionDescription>
-                    <FlexWrapper justify={'center'} wrap={'wrap'} gap={"20px"}>
+                    <FlexWrapper justify={'space-around'} wrap={'wrap'} gap={"20px"}>
                         <Plan mostPopular={false}
                               title={'Silver'}
                               price={'0.00'}

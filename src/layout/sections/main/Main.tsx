@@ -1,6 +1,5 @@
 import styled, {css} from "styled-components";
 import photo from '../../../assets/images/photo.webp'
-import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import {Container} from "../../../components/Container.tsx";
 import {theme} from "../../../slyles/Theme.ts";
 import {Button} from "../../../components/Button.tsx";
@@ -10,12 +9,12 @@ export const Main = () => {
         <StyledMain>
                 <Container>
                     <ForegroundStyledMain>
-                        <FlexWrapper direction={'column'}>
+                        <MainContentWrapper>
                             <Name>I am Sergey Mikhovich</Name>
                             <MainTitle><AccentTitle>Front-end </AccentTitle>Developer</MainTitle>
                             <Description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, volutpat feugiat placerat lobortis. Natoque rutrum semper sed suspendisse nunc lectus.</Description>
                             <Button>Hire Me</Button>
-                        </FlexWrapper>
+                        </MainContentWrapper>
 
                         <Photo src={photo} alt="photo" />
                     </ForegroundStyledMain>
@@ -30,12 +29,26 @@ const StyledMain = styled.section`
 
 const ForegroundStyledMain = styled.div`
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-around;
+
     flex-wrap: wrap;
     background-color: ${theme.colors.primaryBg};
     padding: 0 60px;
+
+    @media screen and (max-width: 768px) {
+        padding: 0 10px;
+    }
 `;
+
+const MainContentWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    padding: 100px 0 0;
+
+    @media screen and (max-width: 768px) {
+        padding: 100px 20px 0;
+    }
+`
 
 const Name = styled.h2`
     font-weight: bold;
@@ -65,8 +78,8 @@ const Description = styled.p`
 `;
 
 const Photo = styled.img`
-    width: 325px;
-    height: 460px;
+    width: 320px;
+    height: 450px;
     object-fit: cover;
 `;
 
