@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import {FlexWrapper} from "../FlexWrapper.tsx";
+import {theme} from "../../slyles/Theme.ts";
 
 export type PhotoCardPropsType = {
     photo: string,
@@ -13,9 +14,11 @@ export const PhotoCard = (props: PhotoCardPropsType) => {
         <StyledPhotoCard>
             <FlexWrapper direction={"column"} align={"flex-start"}>
                 <Photo src={props.photo} alt={'photo'}></Photo>
-                <Title>{props.title || ''}</Title>
-                <p>{props.description || ''}</p>
-                <a href={'#'}>{props.linkText || ''}</a>
+                <ContentWrapper>
+                    <Title>{props.title}</Title>
+                    <Description>{props.description}</Description>
+                    <a href={'#'}>{props.linkText}</a>
+                </ContentWrapper>
             </FlexWrapper>
         </StyledPhotoCard>
     );
@@ -24,7 +27,7 @@ export const PhotoCard = (props: PhotoCardPropsType) => {
 const StyledPhotoCard = styled.div`
     max-width: 310px;
     width: 100%;
-    border: solid 1px black;
+    background-color: ${theme.colors.primaryBg};
 `;
 
 const Photo = styled.img`
@@ -33,5 +36,14 @@ const Photo = styled.img`
     object-fit: cover;
 `;
 
+const ContentWrapper = styled.div`
+    padding: 25px;
+`;
+
 const Title = styled.h3`
+    
+`;
+
+const Description = styled.p`
+    margin: 8px 0;
 `;

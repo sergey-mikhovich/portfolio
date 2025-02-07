@@ -9,7 +9,7 @@ type PhotoAlbumPropsType = {
 export const PhotoAlbum = (props: PhotoAlbumPropsType) => {
     return (
         <StyledPhotoAlbum>
-            <FlexWrapper wrap={'wrap'} justify={'space-evenly'}>
+            <FlexWrapper justify={"center"} wrap={'wrap'} gap={"20px"}>
                 {props.photos.map(item => (
                     <PhotoCard
                         photo={item.photo}

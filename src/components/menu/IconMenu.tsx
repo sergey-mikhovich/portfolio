@@ -4,6 +4,8 @@ import {Icon} from "../icon/Icon.tsx";
 type IconMenuItemsPropsType = {
     href: string,
     iconId: string,
+    width?: string,
+    viewBox?: string
 }
 
 type IconMenuPropsType = {
@@ -17,7 +19,7 @@ export const IconMenu = (props: IconMenuPropsType) => {
                 {props.items.map(item => (
                     <li>
                         <a href={item.href}>
-                            <Icon iconId={item.iconId}/>
+                            <Icon iconId={item.iconId} width={item.width} viewBox={item.viewBox} />
                         </a>
                     </li>
                 ))}
@@ -27,12 +29,13 @@ export const IconMenu = (props: IconMenuPropsType) => {
 };
 
 const StyledIconMenu = styled.div`
+
     ul {
         display: flex;
-        gap: 20px;
+        flex-direction: column;
+        gap: 40px;
         justify-content: center;
         align-items: center;
-        list-style-type: none;
-        flex-direction: column;
+        min-height: 100vh;
     }
 `;

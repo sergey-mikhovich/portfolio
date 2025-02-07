@@ -1,34 +1,29 @@
 import styled from "styled-components";
 
-export const Menu = () => {
+type MenuPropsType = {
+    menuItems: Array<string>
+    gap: string
+}
+
+export const Menu = (props: MenuPropsType) => {
     return (
-        <StyledMenu>
+        <StyledMenu gap={props.gap}>
             <ul>
-                <li>
-                    <a href="#">All Categories</a>
-                </li>
-                <li>
-                    <a href="#">UI Design</a>
-                </li>
-                <li>
-                    <a href="#">Web Templates</a>
-                </li>
-                <li>
-                    <a href="#">Logo</a>
-                </li>
-                <li>
-                    <a href="#">Branding</a>
-                </li>
+                {props.menuItems.map(menuItem => (
+                    <li>
+                        <a href="#">{menuItem}</a>
+                    </li>
+                ))}
             </ul>
         </StyledMenu>
     );
 };
 
-const StyledMenu = styled.nav`
+const StyledMenu = styled.nav<{gap: string}>`
     ul {
         display: flex;
-        gap: 30px;
+        gap: ${props => props.gap};
         justify-content: center;
-        list-style-type: none;
+        overflow-x: auto;
     }
 `;

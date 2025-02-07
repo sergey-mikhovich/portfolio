@@ -2,6 +2,7 @@ import styled from "styled-components";
 import {SectionTitle} from "../SectionTitle.tsx";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import {Button} from "../../../components/Button.tsx";
+import {theme} from "../../../slyles/Theme.ts";
 
 export const LeaveInfo = () => {
     return (
@@ -22,7 +23,7 @@ export const LeaveInfo = () => {
                 </FlexWrapper>
                 <FlexWrapper direction={'column'}>
                     <Label htmlFor={'message'}>Your message</Label>
-                    <Field as={"textarea"} id={'message'}/>
+                    <TextArea id={'message'}/>
                 </FlexWrapper>
                 <Button type={"submit"}>Send Message</Button>
             </StyledForm>
@@ -34,8 +35,7 @@ const StyledLeaveInfo = styled.section`
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 50vh;
-    background-color: aliceblue;
+    background-color: ${theme.colors.secondaryBg};
     max-width: 570px;
     width: 100%;
 `;
@@ -43,13 +43,26 @@ const StyledLeaveInfo = styled.section`
 const StyledForm = styled.form`
     display: flex;
     width: 100%;
+    min-height: 670px;
     flex-direction: column;
-    gap: 20px;
+    gap: 25px;
+    background-color: ${theme.colors.primaryBg};
+    padding: 25px;
+    margin-top: 50px;
 `;
 
 const Label = styled.label`
     display: block;
+    font-weight: 500;
+    font-size: 18px;
+    color: ${theme.colors.secondaryFont};
+    margin-bottom: 8px;
 `;
 
 const Field = styled.input`
+    min-height: 50px;
+`;
+
+const TextArea = styled.textarea`
+    min-height: 210px;
 `;

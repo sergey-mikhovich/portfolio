@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import {Icon} from "../icon/Icon.tsx";
 import {FlexWrapper} from "../FlexWrapper.tsx";
+import {theme} from "../../slyles/Theme.ts";
 
 type RecordPropsType = {
     name: string,
@@ -18,8 +19,8 @@ export const ContactCard = (props: ContactInfoPropsType) => {
             <Icon iconId={props.iconId} width={'40px'} viewBox={'0 0 40 40'}/>
             {props.records.map((record: RecordPropsType) => (
                 <FlexWrapper justify={'space-between'}>
-                    <span>{record.name}:</span>
-                    <span>{record.value}</span>
+                    <Name>{record.name}:</Name>
+                    <Value>{record.value}</Value>
                 </FlexWrapper>
             ))}
         </StyledContactCard>
@@ -27,9 +28,22 @@ export const ContactCard = (props: ContactInfoPropsType) => {
 };
 
 const StyledContactCard = styled.div`
+    min-height: 210px;
+    max-width: 370px;
     width: 100%;
-    border: 1px solid black;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+
+    background-color: ${theme.colors.primaryBg};
+    padding: 25px;
 `;
+
+const Name = styled.span`
+    font-weight: 500;
+    font-size: 18px;
+    color: ${theme.colors.secondaryFont};
+`;
+
+const Value = styled.p`
+    
+`

@@ -13,7 +13,7 @@ export const Services = () => {
             <Container>
                 <SectionTitle>My Services</SectionTitle>
                 <SectionDescription>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. lorem ipsum</SectionDescription>
-                <FlexWrapper direction={"row"} justify={"center"} wrap={"wrap"} gap={"20px"}>
+                <FlexWrapper justify={"center"} wrap={"wrap"} gap={"20px"}>
                     <Service iconId={'coding'} title={'Web Development'} description={'blog, e-commerce'}/>
                     <Service iconId={'uiuxdesign'} title={'UI/UX Design'} description={'Mobile app, website design'}/>
                     <Service iconId={'sound'} title={'Sound Design'} description={'blog, e-commerce'}/>

@@ -5,6 +5,7 @@ import {
     RecommendationProfile,
     RecommendationProfilePropsType
 } from "../RecommendationProfile/RecommendationProfile.tsx";
+import {theme} from "../../../../slyles/Theme.ts";
 
 type RecommendationsPropsType = {
     icons: Array<IconPropsType>
@@ -16,12 +17,12 @@ type RecommendationsPropsType = {
 export const Recommendation = (props: RecommendationsPropsType) => {
     return (
         <StyledRecommendation>
-            <FlexWrapper direction={"column"}>
-                <FlexWrapper>
+            <FlexWrapper direction={"column"} align={"flex-start"}>
+                <Stars>
                     {props.icons.map(icon => (
-                        <Icon iconId={icon.iconId} width={icon.width} viewBox={icon.viewBox}/>
+                        <Icon iconId={icon.iconId} width={icon.width ? icon.width : "18px"} viewBox={icon.viewBox ? icon.viewBox : "0 0 18 18"}/>
                     ))}
-                </FlexWrapper>
+                </Stars>
                 <Title>{props.title}</Title>
                 <Description>{props.description}</Description>
                 <RecommendationProfile
@@ -36,15 +37,26 @@ export const Recommendation = (props: RecommendationsPropsType) => {
 const StyledRecommendation = styled.div`
     max-width: 310px;
     width: 100%;
-    background-color: antiquewhite;
-    border: solid black;
+    min-height: 320px;
+    background-color: ${theme.colors.primaryBg};
+    padding: 20px 25px;
 `;
+
+const Stars = styled.div`
+    display: flex;
+    gap: 10px;
+`
 
 const Title = styled.h3`
-    
+    padding-top: 15px;
 `;
 
-const Description = styled.p`
-    
+const Description = styled.span`
+    text-align: start;
+    margin: 20px 0 30px;
+
+    font-size: 15px;
+    line-height: 24px;
+    color: ${theme.colors.secondaryFont};
 `;
 

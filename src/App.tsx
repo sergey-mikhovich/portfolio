@@ -8,11 +8,9 @@ import {WorkHistory} from "./layout/sections/work_history/WorkHistory.tsx";
 import {Portfolio} from "./layout/sections/portfolio/Portfolio.tsx";
 import {Blog} from "./layout/sections/blog/Blog.tsx";
 import {Footer} from "./layout/footer/Footer.tsx";
-import {ContactInfo} from "./layout/sections/contact_info/ContactInfo.tsx";
-import {FlexWrapper} from "./components/FlexWrapper.tsx";
-import {LeaveInfo} from "./layout/sections/leave_info/LeaveInfo.tsx";
 import {NavigationSidebar} from "./layout/sidebars/navigation/NavigationSidebar.tsx";
 import {ProfileSidebar} from "./layout/sidebars/profile/ProfileSidebar.tsx";
+import {CompoundFeedback} from "./layout/sections/compound_feedback/CompoundFeedback.tsx";
 
 export default function App() {
     return (
@@ -26,10 +24,7 @@ export default function App() {
             <WorkHistory/>
             <Portfolio/>
             <Blog/>
-            <FlexWrapper justify={'space-evenly'} wrap={"wrap"}>
-                <LeaveInfo/>
-                <ContactInfo/>
-            </FlexWrapper>
+            <CompoundFeedback/>
             <Footer/>
             {/*<NavigationSidebar/>*/}
         </div>

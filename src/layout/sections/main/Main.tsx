@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 import photo from '../../../assets/images/photo.webp'
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import {Container} from "../../../components/Container.tsx";
@@ -12,7 +12,7 @@ export const Main = () => {
                     <ForegroundStyledMain>
                         <FlexWrapper direction={'column'}>
                             <Name>I am Sergey Mikhovich</Name>
-                            <MainTitle>Front-end Developer</MainTitle>
+                            <MainTitle><AccentTitle>Front-end </AccentTitle>Developer</MainTitle>
                             <Description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, volutpat feugiat placerat lobortis. Natoque rutrum semper sed suspendisse nunc lectus.</Description>
                             <Button>Hire Me</Button>
                         </FlexWrapper>
@@ -30,7 +30,7 @@ const StyledMain = styled.section`
 
 const ForegroundStyledMain = styled.div`
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     background-color: ${theme.colors.primaryBg};
@@ -42,9 +42,18 @@ const Name = styled.h2`
     font-size: 48px;
 `;
 
-const MainTitle = styled.h1`
+const cssTitle = css`
     font-weight: bold;
     font-size: 48px;
+`;
+
+const MainTitle = styled.h1`
+    ${cssTitle};
+`;
+
+const AccentTitle = styled.span`
+    ${cssTitle};
+    color: ${theme.colors.accent};
 `;
 
 const Description = styled.p`

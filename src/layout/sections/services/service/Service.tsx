@@ -31,13 +31,9 @@ export const StyledSkill = styled.div`
 `;
 
 const Title = styled.h3`
-    font-weight: 500;
-    font-size: 18px;
     padding: 25px 0 15px;
 `;
 
 const Description = styled.p`
-    font-size: 15px;
-    line-height: 24px;
-    color: ${theme.colors.secondaryFont};
+
 `;

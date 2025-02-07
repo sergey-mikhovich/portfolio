@@ -12,9 +12,9 @@ export const RecommendationProfile = (props: RecommendationProfilePropsType) => 
         <StyledRecommendationProfile>
             <FlexWrapper>
                 <StyledAvatar src={props.photo} alt="avatar"  />
-                <FlexWrapper direction={'column'}>
-                    <h3>{props.name}</h3>
-                    <span>{props.profession}</span>
+                <FlexWrapper direction={'column'} justify={'center'} align={"start"}>
+                    <Name>{props.name}</Name>
+                    <Profession>{props.profession}</Profession>
                 </FlexWrapper>
             </FlexWrapper>
         </StyledRecommendationProfile>
@@ -23,11 +23,20 @@ export const RecommendationProfile = (props: RecommendationProfilePropsType) => 
 
 const StyledAvatar = styled.img`
     border-radius: 50%;
-    max-width: 80px;
-    width: 100%;
+    width: 80px;
     height: 80px;
+    margin-right: 25px;
 `;
 
 const StyledRecommendationProfile = styled.div`
     
 `;
+
+const Name = styled.h3`
+    margin-bottom: 5px;
+`;
+
+const Profession = styled.p`
+    
+`;
+

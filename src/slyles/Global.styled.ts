@@ -20,6 +20,7 @@ export const GlobalStyle = createGlobalStyle`
         
         color: ${theme.colors.primaryFont};
         line-height: 1.2;
+        
     }
 
     code {
@@ -29,10 +30,15 @@ export const GlobalStyle = createGlobalStyle`
     
     a {
         text-decoration: none;
+        color: ${theme.colors.primaryFont};
     }
     
     ul {
         list-style: none;
+    }
+    
+    li {
+        list-style-type: none;
     }
     
     button {
@@ -50,5 +56,16 @@ export const GlobalStyle = createGlobalStyle`
     
     section:nth-child(n + 3) {
         padding: 70px 0 0;
+    }
+    
+    h3 {
+        font-weight: 500;
+        font-size: 18px;
+    }
+    
+    p {
+        font-size: 15px;
+        line-height: 24px;
+        color: ${theme.colors.secondaryFont};
     }
 `;
