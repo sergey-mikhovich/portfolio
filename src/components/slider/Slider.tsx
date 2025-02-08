@@ -30,12 +30,12 @@ const StyledSlider = styled.div`
 const Slide = styled.div`
     text-align: center;
 `
-const Text = styled.p`
-    
-`
-const Name = styled.span`
-    
-`
+// const Text = styled.p`
+//
+// `
+// const Name = styled.span`
+//
+// `
 
 const Pagination = styled.span`
     span {

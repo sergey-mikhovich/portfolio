@@ -8,8 +8,6 @@ import {WorkHistory} from "./layout/sections/work_history/WorkHistory.tsx";
 import {Portfolio} from "./layout/sections/portfolio/Portfolio.tsx";
 import {Blog} from "./layout/sections/blog/Blog.tsx";
 import {Footer} from "./layout/footer/Footer.tsx";
-import {NavigationSidebar} from "./layout/sidebars/navigation/NavigationSidebar.tsx";
-import {ProfileSidebar} from "./layout/sidebars/profile/ProfileSidebar.tsx";
 import {CompoundFeedback} from "./layout/sections/compound_feedback/CompoundFeedback.tsx";
 
 export default function App() {

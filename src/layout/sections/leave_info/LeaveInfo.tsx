@@ -34,7 +34,7 @@ export const LeaveInfo = () => {
 const StyledLeaveInfo = styled.section`
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     background-color: ${theme.colors.secondaryBg};
     max-width: 570px;
     width: 100%;
@@ -42,9 +42,10 @@ const StyledLeaveInfo = styled.section`
 
 const StyledForm = styled.form`
     display: flex;
-    width: 100%;
-    min-height: 670px;
     flex-direction: column;
+    min-height: 670px;
+    width: 100%;
+    height: 100%;
     gap: 25px;
     background-color: ${theme.colors.primaryBg};
     padding: 25px;

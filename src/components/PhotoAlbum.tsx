@@ -10,12 +10,13 @@ export const PhotoAlbum = (props: PhotoAlbumPropsType) => {
     return (
         <StyledPhotoAlbum>
             <FlexWrapper justify={"space-around"} wrap={'wrap'} gap={"20px"}>
-                {props.photos.map(item => (
+                {props.photos.map((item) => (
                     <PhotoCard
                         photo={item.photo}
                         title={item.title}
                         description={item.description}
-                        linkText={item.linkText}/>
+                        linkText={item.linkText}
+                        highlighted={item.highlighted} />
                 ))}
             </FlexWrapper>
         </StyledPhotoAlbum>

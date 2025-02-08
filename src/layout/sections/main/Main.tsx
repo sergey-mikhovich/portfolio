@@ -30,6 +30,8 @@ const StyledMain = styled.section`
 const ForegroundStyledMain = styled.div`
     display: flex;
     justify-content: space-around;
+    min-height: 470px;
+    height: 100%;
 
     flex-wrap: wrap;
     background-color: ${theme.colors.primaryBg};
@@ -41,8 +43,6 @@ const ForegroundStyledMain = styled.div`
 `;
 
 const MainContentWrapper = styled.div`
-    display: flex;
-    flex-direction: column;
     padding: 100px 0 0;
 
     @media screen and (max-width: 768px) {
@@ -81,6 +81,7 @@ const Photo = styled.img`
     width: 320px;
     height: 450px;
     object-fit: cover;
+    align-self: end;
 `;
 
 

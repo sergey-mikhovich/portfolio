@@ -671,15 +671,4 @@
     <g id="rightAngleBracket">
         <path d="M3.879 5.00005L0.166504 1.28755L1.227 0.227051L6 5.00005L1.227 9.77305L0.166504 8.71255L3.879 5.00005Z" fill="#FFB400"/>
     </g>
-
-    <g id="plus">
-        <g clip-path="url(#clip0_10_1504)">
-            <path d="M23.8334 23.8333V10.8333H28.1667V23.8333H41.1667V28.1666H28.1667V41.1666H23.8334V28.1666H10.8334V23.8333H23.8334Z" fill="#2B2B2B"/>
-        </g>
-        <defs>
-            <clipPath id="clip0_10_1504">
-                <rect width="52" height="52" fill="white"/>
-            </clipPath>
-        </defs>
-    </g>
 </svg>

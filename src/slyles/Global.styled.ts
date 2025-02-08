@@ -46,16 +46,12 @@ export const GlobalStyle = createGlobalStyle`
         border: none;
     }
 
-    section {
+    section:not(section section) {
         background-color: ${theme.colors.secondaryBg};
-    }
-
-    section:nth-child(2) {
-        padding: 140px 0 0;
-    }
-    
-    section:nth-child(n + 3) {
-        padding: 70px 0 0;
+        
+        &:nth-child(n + 2) {
+            padding: 140px 0 0;
+        }
     }
     
     h3 {
@@ -67,5 +63,18 @@ export const GlobalStyle = createGlobalStyle`
         font-size: 15px;
         line-height: 24px;
         color: ${theme.colors.secondaryFont};
+    }
+    
+    img {
+        display: block;
+    }
+    
+    input, textarea {
+        border: none;
+        background-color: ${theme.colors.secondaryBg};
+        resize: none;
+        padding: 8px;
+        font-size: 20px;
+        color: ${theme.colors.primaryFont};
     }
 `;

@@ -28,7 +28,7 @@ export const Portfolio = () => {
                     />
                 </MenuWrapper>
                 <PhotoAlbum photos={[
-                    { photo: portfolio1 },
+                    { photo: portfolio1, highlighted: true },
                     { photo: portfolio2 },
                     { photo: portfolio3 },
                     { photo: portfolio4 },

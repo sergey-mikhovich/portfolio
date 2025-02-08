@@ -40,6 +40,7 @@ export const ContactInfo = () => {
 const StyledContactInfo = styled.section`
     display: flex;
     flex-direction: column;
+    align-items: start;
     max-width: 370px;
     width: 100%;
     background-color: ${theme.colors.secondaryBg};
@@ -51,5 +52,7 @@ const Contacts = styled.div`
     
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
     gap: 20px
 `;

@@ -34,7 +34,6 @@ const StyledFooter = styled.footer`
 const StyledMap = styled.img`
     max-width: calc(100vw - (100vw - 100%));
     min-height: 300px;
-    margin-top: 70px;
     object-fit: cover;
 `;
 
