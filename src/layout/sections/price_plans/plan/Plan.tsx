@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import {PackageItem, PackageItemPropsType} from "../package_item/PackageItem.tsx";
 import {theme} from "../../../../slyles/Theme.ts";
+import {Button} from "../../../../components/button/Button.tsx";
 
 type PlanPropsType = {
     mostPopular: boolean
@@ -25,7 +26,7 @@ export const Plan = (props: PlanPropsType) => {
                         <PackageItem included={item.included} text={item.text}/>
                     ))}
                 </ListItems>
-                <StyledButton backgroundColor={props.mostPopular ? 'orange' : ''}>Order Now</StyledButton>
+                <OrderButton>Order Now</OrderButton>
             </MainContent>
         </StyledPlan>
     );
@@ -82,8 +83,16 @@ const ListItems = styled.ul`
     }
 `
 
-const StyledButton = styled.button<{backgroundColor?: string}>`
-    background-color: ${props => props.backgroundColor ? props.backgroundColor : ''};
+const OrderButton = styled(Button)`
+    padding: 10px 40px;
+    background-color: ${theme.colors.primaryBg};
+    border-radius: 30px;
+    box-shadow: 1px 0 10px 0 rgba(0, 0, 0, 0.15);
+    font-weight: 700;
+
+    &:hover {
+        background-color: ${theme.colors.accent};
+    }
 `;
 
 

@@ -2,7 +2,8 @@ import styled, {css} from "styled-components";
 import photo from '../../../assets/images/photo.webp'
 import {Container} from "../../../components/Container.tsx";
 import {theme} from "../../../slyles/Theme.ts";
-import {Button} from "../../../components/Button.tsx";
+import {Button} from "../../../components/button/Button.tsx";
+import {Icon} from "../../../components/icon/Icon.tsx";
 
 export const Main = () => {
     return (
@@ -13,7 +14,10 @@ export const Main = () => {
                             <Name>I am Sergey Mikhovich</Name>
                             <MainTitle><AccentTitle>Front-end </AccentTitle>Developer</MainTitle>
                             <Description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, volutpat feugiat placerat lobortis. Natoque rutrum semper sed suspendisse nunc lectus.</Description>
-                            <Button>Hire Me</Button>
+                            <MainButton>
+                                Hire Me
+                                <Icon iconId={"rightArrow"} width={"16px"} viewBox={"0 0 16 16"}/>
+                            </MainButton>
                         </MainContentWrapper>
 
                         <Photo src={photo} alt="photo" />
@@ -79,6 +83,17 @@ const Photo = styled.img`
     height: 450px;
     object-fit: cover;
     align-self: end;
+`;
+
+const MainButton = styled(Button)`
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+    padding: 16px 32px;
+    font-weight: 500;
+    font-size: 16px;
+    border-radius: 5px;
 `;
 
 

@@ -42,8 +42,10 @@ export const GlobalStyle = createGlobalStyle`
     }
     
     button {
-        background-color: unset;
         border: none;
+        
+        cursor: pointer;
+        background-color: ${theme.colors.accent};
     }
     
     section, footer {
@@ -68,7 +70,7 @@ export const GlobalStyle = createGlobalStyle`
     
     p, span {
         font-size: 15px;
-        line-height: 24px;
+        line-height: 1.6;
     }
     
     p {

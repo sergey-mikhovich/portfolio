@@ -14,10 +14,10 @@ export const OrderService = (props: OrderServicePropsType) => {
         <StyledOrderService>
             <Title>{props.title}</Title>
             <Description>{props.description}</Description>
-            <LinkWrapper>
+            <OrderButton>
                 <ActionText href={'#'}>{props.actionText}</ActionText>
                 <Icon iconId={"rightAngleBracket"} width={"10px"} viewBox={"0 0 10px 10px"}/>
-            </LinkWrapper>
+            </OrderButton>
         </StyledOrderService>
     );
 };
@@ -38,11 +38,14 @@ const Description = styled.p`
     padding: 25px 0 10px;
 `;
 
-const LinkWrapper = styled.div`
+const OrderButton = styled.button`
     display: flex;
+    min-height: 20px;
+    height: 100%;
     gap: 10px;
     justify-content: center;
     align-items: center;
+    background-color: transparent;
 `;
 
 const ActionText = styled.a`

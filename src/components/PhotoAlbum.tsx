@@ -13,8 +13,7 @@ export const PhotoAlbum = (props: PhotoAlbumPropsType) => {
                     photo={item.photo}
                     title={item.title}
                     description={item.description}
-                    linkText={item.linkText}
-                    highlighted={item.highlighted} />
+                    linkText={item.linkText} />
             ))}
         </StyledPhotoAlbum>
     );

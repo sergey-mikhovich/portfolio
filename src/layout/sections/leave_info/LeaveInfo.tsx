@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import {SectionTitle} from "../SectionTitle.tsx";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
-import {Button} from "../../../components/Button.tsx";
+import {Button} from "../../../components/button/Button.tsx";
 import {theme} from "../../../slyles/Theme.ts";
 
 export const LeaveInfo = () => {
@@ -25,7 +25,7 @@ export const LeaveInfo = () => {
                     <Label htmlFor={'message'}>Your message</Label>
                     <TextArea id={'message'}/>
                 </FlexWrapper>
-                <Button type={"submit"}>Send Message</Button>
+                <SendButton type={"submit"}>Send Message</SendButton>
             </StyledForm>
         </StyledLeaveInfo>
     );
@@ -63,4 +63,12 @@ const Field = styled.input`
 
 const TextArea = styled.textarea`
     min-height: 210px;
+`;
+
+const SendButton = styled(Button)`
+    padding: 10px 24px;
+    font-weight: 600;
+    min-height: 35px;
+    max-width: 170px;
+    
 `;

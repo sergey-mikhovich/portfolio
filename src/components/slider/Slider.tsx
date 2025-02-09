@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import {FlexWrapper} from "../FlexWrapper.tsx";
+import {theme} from "../../slyles/Theme.ts";
 
 export const Slider = () => {
     return (
@@ -37,14 +38,17 @@ const Slide = styled.div`
 //
 // `
 
-const Pagination = styled.span`
+const Pagination = styled.div`
     span {
         display: inline-block;
         width: 10px;
         height: 10px;
-        margin: 5px;
-        background-color: #FFB400;
+        background-color: ${theme.colors.accent};
         border-radius: 50%;
+
+        & + span {
+            margin-left: 10px;
+        }
     }
 `;
 

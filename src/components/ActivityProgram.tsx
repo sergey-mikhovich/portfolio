@@ -4,7 +4,6 @@ import {theme} from "../slyles/Theme.ts";
 import {Line} from "./Line.tsx";
 
 type ActivityProgramPropsType = {
-    showDelimiters?: boolean
     items: Array<ActivityItemPropsType>
 }
 
@@ -19,7 +18,7 @@ export const ActivityProgram = (props: ActivityProgramPropsType) => {
                         duration={item.duration}
                         titleRight={item.titleRight}
                         description={item.description}/>
-                    <Line hidden={!props.showDelimiters || index == props.items.length - 1}/>
+                    <Line hidden={index == props.items.length - 1}/>
                 </>
             ))}
         </StyledActivityProgram>

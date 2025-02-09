@@ -4,7 +4,7 @@ import {Icon} from "../../../components/icon/Icon.tsx";
 import {theme} from "../../../slyles/Theme.ts";
 import {ContactItem} from "./contact_item/ContactItem.tsx";
 import {ProgressItem} from "./progress_item/ProgressItem.tsx";
-import {Button} from "../../../components/Button.tsx";
+import {Button} from "../../../components/button/Button.tsx";
 
 const socialIconWidth = "14px"
 const socialIconViewBox = "0 0 14 14"

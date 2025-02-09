@@ -10,7 +10,7 @@ export const Education = () => {
             <Container>
                 <SectionTitle>Education</SectionTitle>
                 <SectionDescription>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. lorem ipsum</SectionDescription>
-                <ActivityProgram showDelimiters items={[
+                <ActivityProgram items={[
                     {
                         titleLeft: 'University of Toronto',
                         status: 'Student',
