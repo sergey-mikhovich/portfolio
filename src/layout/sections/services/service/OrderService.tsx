@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import {StyledSkill} from "./Service.tsx";
-import {FlexWrapper} from "../../../../components/FlexWrapper.tsx";
 import {theme} from "../../../../slyles/Theme.ts";
 import {Icon} from "../../../../components/icon/Icon.tsx";
 
@@ -13,20 +12,21 @@ type OrderServicePropsType = {
 export const OrderService = (props: OrderServicePropsType) => {
     return (
         <StyledOrderService>
-            <FlexWrapper direction={"column"} justify={"center"} align={"center"}>
-                <Title>{props.title}</Title>
-                <Description>{props.description}</Description>
-                <FlexWrapper justify={"center"} align={"center"}>
-                    <ActionText href={'#'}>{props.actionText}</ActionText>
-                    <Icon iconId={"rightAngleBracket"} width={"20px"} viewBox={"0 0 20px 20px"}/>
-                </FlexWrapper>
-            </FlexWrapper>
+            <Title>{props.title}</Title>
+            <Description>{props.description}</Description>
+            <LinkWrapper>
+                <ActionText href={'#'}>{props.actionText}</ActionText>
+                <Icon iconId={"rightAngleBracket"} width={"10px"} viewBox={"0 0 10px 10px"}/>
+            </LinkWrapper>
         </StyledOrderService>
     );
 };
 
 const StyledOrderService = styled(StyledSkill)`
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 `;
 
 const Title = styled.h3`
@@ -34,10 +34,15 @@ const Title = styled.h3`
 `;
 
 const Description = styled.p`
-    font-size: 15px;
-    line-height: 24px;
-    color: ${theme.colors.secondaryFont};
+    text-align: center;
     padding: 25px 0 10px;
+`;
+
+const LinkWrapper = styled.div`
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
 `;
 
 const ActionText = styled.a`

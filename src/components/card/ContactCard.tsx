@@ -32,13 +32,13 @@ export const ContactCard = (props: ContactInfoPropsType) => {
 };
 
 const StyledContactCard = styled.div`
-    min-height: 210px;
-    width: 100%;
-    
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    
+    min-height: 210px;
+    width: 100%;
 
     background-color: ${theme.colors.primaryBg};
     padding: 25px;
@@ -77,6 +77,6 @@ const Name = styled.span`
     color: ${theme.colors.secondaryFont};
 `;
 
-const Value = styled.p`
-    
+const Value = styled.span`
+    color: ${theme.colors.secondaryFont};
 `

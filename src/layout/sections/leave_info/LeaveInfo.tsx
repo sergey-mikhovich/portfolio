@@ -54,9 +54,6 @@ const StyledForm = styled.form`
 
 const Label = styled.label`
     display: block;
-    font-weight: 500;
-    font-size: 18px;
-    color: ${theme.colors.secondaryFont};
     margin-bottom: 8px;
 `;
 

@@ -20,7 +20,7 @@ export const Footer = () => {
                 </LogoWrapper>
                 <CopyrightWrapper>
                     <Icon iconId={'copyright'} width={"24px"} viewBox={'0 0 24 24'}/>
-                    <Copyright>2025 Sergey Mikhovich. All Rights Reserved.</Copyright>
+                    <Copyright>2025 All Rights Reserved.</Copyright>
                 </CopyrightWrapper>
             </Container>
         </StyledFooter>
@@ -28,7 +28,7 @@ export const Footer = () => {
 };
 
 const StyledFooter = styled.footer`
-    background-color: ${theme.colors.secondaryBg};
+    
 `;
 
 const StyledMap = styled.img`
@@ -47,12 +47,15 @@ const LogoWrapper = styled.div`
 const CopyrightWrapper = styled.div`
     display: flex;
     justify-content: center;
-    gap: 15px;
     align-items: center;
-    height: 60px;
+    gap: 15px;
+    min-height: 60px;
+    padding: 20px 40px;
     background-color: ${theme.colors.primaryBg}
 `;
 
 const Copyright = styled.small`
-    
+    font-size: 15px;
+    line-height: 24px;
+    text-align: center;
 `;

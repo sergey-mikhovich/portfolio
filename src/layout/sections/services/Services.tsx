@@ -4,7 +4,6 @@ import {SectionDescription} from "../SectionDescription.tsx";
 import {Service} from "./service/Service.tsx";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import {OrderService} from "./service/OrderService.tsx";
-import {theme} from "../../../slyles/Theme.ts";
 import {Container} from "../../../components/Container.tsx";
 
 export const Services = () => {
@@ -27,6 +26,5 @@ export const Services = () => {
 };
 
 const StyledServices = styled.section`
-    background-color: ${theme.colors.secondaryBg};
 `;
 

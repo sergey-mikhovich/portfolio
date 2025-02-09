@@ -13,7 +13,8 @@ import portfolio8 from "../../../assets/images/portfolio-8.webp";
 import portfolio9 from "../../../assets/images/portfolio-9.webp";
 import {Menu} from "../../../components/menu/Menu.tsx";
 import {Container} from "../../../components/Container.tsx";
-import {theme} from "../../../slyles/Theme.ts";
+
+const navMenuItems = ["All Categories", "UI Design", "Web Templates", "Logo", "Branding"]
 
 export const Portfolio = () => {
     return (
@@ -23,7 +24,7 @@ export const Portfolio = () => {
                 <SectionDescription>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. lorem ipsum</SectionDescription>
                 <MenuWrapper>
                     <Menu
-                        menuItems={["All Categories", "UI Design", "Web Templates", "Logo", "Branding",]}
+                        menuItems={navMenuItems}
                         gap={"40px"}
                     />
                 </MenuWrapper>
@@ -44,7 +45,6 @@ export const Portfolio = () => {
 };
 
 const StyledPortfolio = styled.section`
-    background-color: ${theme.colors.secondaryBg};
 `;
 
 const MenuWrapper = styled.div`

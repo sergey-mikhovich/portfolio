@@ -45,13 +45,20 @@ export const GlobalStyle = createGlobalStyle`
         background-color: unset;
         border: none;
     }
+    
+    section, footer {
+        background-color: ${theme.colors.secondaryBg};
+    }
 
     section:not(section section) {
-        background-color: ${theme.colors.secondaryBg};
-        
         &:nth-child(n + 2) {
             padding: 140px 0 0;
         }
+    }
+    
+    h2 {
+        font-weight: 700;
+        font-size: 32px;
     }
     
     h3 {
@@ -59,9 +66,18 @@ export const GlobalStyle = createGlobalStyle`
         font-size: 18px;
     }
     
-    p {
+    p, span {
         font-size: 15px;
         line-height: 24px;
+    }
+    
+    p {
+        color: ${theme.colors.secondaryFont};
+    }
+    
+    label {
+        font-weight: 500;
+        font-size: 18px;
         color: ${theme.colors.secondaryFont};
     }
     

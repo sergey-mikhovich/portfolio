@@ -39,7 +39,7 @@ const StyledRecommendation = styled.div`
     width: 100%;
     min-height: 320px;
     background-color: ${theme.colors.primaryBg};
-    padding: 20px 25px;
+    padding: 25px 25px;
 `;
 
 const Stars = styled.div`
@@ -48,15 +48,11 @@ const Stars = styled.div`
 `
 
 const Title = styled.h3`
-    padding-top: 15px;
+    padding: 15px 0 20px;
 `;
 
-const Description = styled.span`
+const Description = styled.p`
     text-align: start;
-    margin: 20px 0 30px;
-
-    font-size: 15px;
-    line-height: 24px;
-    color: ${theme.colors.secondaryFont};
+    margin: 0 0 30px;
 `;
 

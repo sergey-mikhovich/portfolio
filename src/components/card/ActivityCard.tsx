@@ -4,6 +4,7 @@ import {theme} from "../../slyles/Theme.ts";
 
 export type ActivityItemPropsType = {
     titleLeft: string
+    status: string
     duration: string
     titleRight: string
     description: string
@@ -12,40 +13,50 @@ export type ActivityItemPropsType = {
 export const ActivityCard = (props: ActivityItemPropsType) => {
     return (
         <StyledActivityCard>
-            <FlexWrapper justify={"space-between"} wrap={"wrap"} gap={"30px"}>
-                <LeftPart>
-                    <Title>{props.titleLeft}</Title>
-                    <FlexWrapper>
-                        <Status>Student</Status>
-                        <Duration>{props.duration}</Duration>
-                    </FlexWrapper>
-                </LeftPart>
-                <RightPart>
-                    <Title>{props.titleRight}</Title>
-                    <Description>{props.description}</Description>
-                </RightPart>
-            </FlexWrapper>
+            <LeftPart>
+                <Title>{props.titleLeft}</Title>
+                <FlexWrapper align={'center'}>
+                    <Status>{props.status}</Status>
+                    <Duration>{props.duration}</Duration>
+                </FlexWrapper>
+            </LeftPart>
+            <RightPart>
+                <Title>{props.titleRight}</Title>
+                <Description>{props.description}</Description>
+            </RightPart>
         </StyledActivityCard>
     );
 };
 
 const StyledActivityCard = styled.li`
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    
     background-color: ${theme.colors.primaryBg};
-    min-height: 150px;
-    padding: 30px 0;
+    min-height: 160px;
+    height: 100%;
 `;
 
 const LeftPart = styled.div`
     display: flex;
     flex-direction: column;
-    max-width: 360px;
+    justify-content: start;
+    max-width: 355px;
+    width: 100%;
+    height: 100%;
 `;
 
 
 const RightPart = styled.div`
     display: flex;
     flex-direction: column;
-    max-width: 530px;
+    justify-content: space-between;
+    align-items: start;
+    
+    max-width: 505px;
+    width: 100%;
 `;
 
 const Title = styled.h3`
@@ -57,10 +68,15 @@ const Status = styled.span`
 `;
 
 const Duration = styled.span`
-    background-color: ${theme.colors.accent};
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 7px;
+    
     height: 18px;
     font-size: 10px;
-    vertical-align: middle;
+    border-radius: 1px;
+    background-color: ${theme.colors.accent};
     color: ${theme.colors.primaryBg};
 `;
 

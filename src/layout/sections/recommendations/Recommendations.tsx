@@ -7,7 +7,6 @@ import avatar1 from '../../../assets/images/avatar-1.webp'
 import avatar2 from '../../../assets/images/avatar-2.webp'
 import avatar3 from '../../../assets/images/avatar-3.webp'
 import {Slider} from "../../../components/slider/Slider.tsx";
-import {theme} from "../../../slyles/Theme.ts";
 import {Container} from "../../../components/Container.tsx";
 
 const stars = new Array(5).fill({iconId: 'star'})
@@ -46,7 +45,6 @@ export const Recommendations = () => {
 };
 
 const StyledRecommendations = styled.section`
-    background-color: ${theme.colors.secondaryBg};
 `;
 
 const SliderWrapper = styled.div`

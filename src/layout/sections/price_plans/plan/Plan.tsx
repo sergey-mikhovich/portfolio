@@ -39,24 +39,25 @@ const StyledPlan = styled.div`
 `;
 
 const EyeCatchingTitle = styled.div<{mostPopular: boolean}>`
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 15px;
-    line-height: 24px;
     background-color: ${props => props.mostPopular ? theme.colors.accent : theme.colors.primaryBg};
     min-height: 30px;
 `;
 
 const MainContent = styled.div`
-    padding: 0 30px 25px;
+    padding: 25px 30px;
 `;
 
 const Title = styled.h3`
     font-weight: 600;
     font-size: 24px;
-    margin-top: 25px;
 `;
 
 const ComposePrice = styled.div`
-    margin: 20px 0 8px;
+    margin: 20px 0 10px;
 `
 
 const Price = styled.span`
@@ -66,7 +67,7 @@ const Price = styled.span`
 `;
 
 const Hour = styled.span`
-    font-size: 15px;
+    
 `;
 
 const Description = styled.p`
@@ -76,16 +77,8 @@ const Description = styled.p`
 const ListItems = styled.ul`
     margin: 20px 0;
     
-    li {
-        margin: 8px 0;
-    }
-    
-    li:first-child {
-        margin: 0 0 8px;
-    }
-    
-    li:last-child {
-        margin: 8px 0 0;
+    li + li {
+        margin-top: 16px;
     }
 `
 

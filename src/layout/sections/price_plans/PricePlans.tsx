@@ -4,7 +4,6 @@ import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import {SectionTitle} from "../SectionTitle.tsx";
 import {SectionDescription} from "../SectionDescription.tsx";
 import {Container} from "../../../components/Container.tsx";
-import {theme} from "../../../slyles/Theme.ts";
 
 export const PricePlans = () => {
     return (
@@ -66,5 +65,4 @@ export const PricePlans = () => {
 };
 
 const StyledPricePlans = styled.section`
-    background-color: ${theme.colors.secondaryBg};
 `;

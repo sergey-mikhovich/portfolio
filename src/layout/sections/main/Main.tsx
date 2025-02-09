@@ -24,7 +24,7 @@ export const Main = () => {
 };
 
 const StyledMain = styled.section`
-    background-color: ${theme.colors.secondaryBg};
+
 `;
 
 const ForegroundStyledMain = styled.div`
@@ -50,14 +50,13 @@ const MainContentWrapper = styled.div`
     }
 `
 
-const Name = styled.h2`
-    font-weight: bold;
+const cssTitle = css`
+    font-weight: 700;
     font-size: 48px;
 `;
 
-const cssTitle = css`
-    font-weight: bold;
-    font-size: 48px;
+const Name = styled.h2`
+    ${cssTitle}
 `;
 
 const MainTitle = styled.h1`
@@ -72,9 +71,7 @@ const AccentTitle = styled.span`
 const Description = styled.p`
     max-width: 410px;
     font-size: 16px;
-    color: ${theme.colors.secondaryFont};
-    margin: 18px 0;
-    line-height: 24px;
+    margin: 25px 0;
 `;
 
 const Photo = styled.img`

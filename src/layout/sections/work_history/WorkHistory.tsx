@@ -13,18 +13,21 @@ export const WorkHistory = () => {
                 <ActivityProgram items={[
                     {
                         titleLeft: 'Lead Web Designer',
+                        status: 'Student',
                         duration: 'Jan 2018 - Dec 2021',
                         titleRight: 'Certificate of Web Training',
                         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet dapibus nibh ut faucibus nunc, egestas id amet porttitor. Pulvinar quisque sed amet, nulla nunc. Eleifend sodales posuere fusce tempus etiam et pellentesque. Molestie risus enim neque eget dui.',
                     },
                     {
                         titleLeft: 'Junior Web Designer',
+                        status: 'Student',
                         duration: 'Jan 2018 - Dec 2021',
                         titleRight: 'Certificate of Web Training',
                         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet dapibus nibh ut faucibus nunc, egestas id amet porttitor. Pulvinar quisque sed amet, nulla nunc. Eleifend sodales posuere fusce tempus etiam et pellentesque. Molestie risus enim neque eget dui.',
                     },
                     {
                         titleLeft: 'Senior Web Designer',
+                        status: 'Student',
                         duration: 'Jan 2018 - Dec 2021',
                         titleRight: 'Certificate of Web Training',
                         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet dapibus nibh ut faucibus nunc, egestas id amet porttitor. Pulvinar quisque sed amet, nulla nunc. Eleifend sodales posuere fusce tempus etiam et pellentesque. Molestie risus enim neque eget dui.',
@@ -36,5 +39,4 @@ export const WorkHistory = () => {
 };
 
 const StyledWorkHistory = styled.section`
-    background-color: #f0f0f6;
 `;

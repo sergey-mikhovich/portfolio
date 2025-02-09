@@ -25,7 +25,7 @@ export const Service = (props: ServicePropsType) => {
 export const StyledSkill = styled.div`
     max-width: 310px;
     width: 100%;
-    min-height: 225px;
+    min-height: 230px;
     background-color: ${theme.colors.primaryBg};
     padding: 30px 25px 40px;
 `;
@@ -35,5 +35,5 @@ const Title = styled.h3`
 `;
 
 const Description = styled.p`
-
+    
 `;
