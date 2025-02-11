@@ -13,25 +13,21 @@ export const NavigationSidebar = () => {
                 <Icon iconId={"contrast"} width={"30px"} viewBox={"0 0 30 30"}/>
             </TopIconWrapper>
             <IconMenu items={[
-                { iconId: 'home', href: '#', width: iconWidth, viewBox: iconViewBox },
-                { iconId: 'file', href: '#', width: iconWidth, viewBox: iconViewBox },
-                { iconId: 'cv', href: '#', width: iconWidth, viewBox: iconViewBox },
-                { iconId: 'portfolio', href: '#', width: iconWidth, viewBox: iconViewBox },
-                { iconId: 'blog', href: '#', width: iconWidth, viewBox: iconViewBox },
-                { iconId: 'contact', href: '#', width: iconWidth, viewBox: iconViewBox },
+                { iconId: 'home', title: "Home", href: '#', width: iconWidth, viewBox: iconViewBox },
+                { iconId: 'file', title: "File", href: '#', width: iconWidth, viewBox: iconViewBox },
+                { iconId: 'cv', title: "CV", href: '#', width: iconWidth, viewBox: iconViewBox },
+                { iconId: 'portfolio', title: "Portfolio", href: '#', width: iconWidth, viewBox: iconViewBox },
+                { iconId: 'blog', title: "Blog", href: '#', width: iconWidth, viewBox: iconViewBox },
+                { iconId: 'contact', title: "Contact", href: '#', width: iconWidth, viewBox: iconViewBox },
             ]}/>
         </StyledNavigation>
     );
 };
 
 const StyledNavigation = styled.nav`
-    background-color: ${theme.colors.tertiaryBg};
+    background-color: ${theme.colors.primaryBg};
     max-width: 110px;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    right: 0;
-    min-height: 100vh;
+    height: 100%;
     padding: 20px;
 `;
 

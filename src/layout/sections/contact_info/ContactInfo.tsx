@@ -48,11 +48,10 @@ const StyledContactInfo = styled.section`
 
 const Contacts = styled.div`
     margin-top: 50px;
-    min-height: 670px;
-    
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
-    gap: 20px
+    min-height: 680px;
+    height: 100%;
 `;

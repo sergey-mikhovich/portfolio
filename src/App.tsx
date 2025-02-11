@@ -9,23 +9,35 @@ import {Portfolio} from "./layout/sections/portfolio/Portfolio.tsx";
 import {Blog} from "./layout/sections/blog/Blog.tsx";
 import {Footer} from "./layout/footer/Footer.tsx";
 import {CompoundFeedback} from "./layout/sections/compound_feedback/CompoundFeedback.tsx";
+import styled from "styled-components";
+import {theme} from "./slyles/Theme.ts";
 
 export default function App() {
     return (
-        <div className="App">
+        <StyledApp>
             {/*<ProfileSidebar/>*/}
-            <Main/>
-            <Services/>
-            <PricePlans/>
-            <Recommendations/>
-            <Education/>
-            <WorkHistory/>
-            <Portfolio/>
-            <Blog/>
-            <CompoundFeedback/>
-            <Footer/>
+            <div>
+                <Main/>
+                <Services/>
+                <PricePlans/>
+                <Recommendations/>
+                <Education/>
+                <WorkHistory/>
+                <Portfolio/>
+                <Blog/>
+                <CompoundFeedback/>
+                <Footer/>
+            </div>
             {/*<NavigationSidebar/>*/}
-        </div>
+        </StyledApp>
     )
 }
+
+const StyledApp = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    background-color: ${theme.colors.secondaryBg};
+`
 

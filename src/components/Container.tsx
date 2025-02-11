@@ -7,7 +7,7 @@ export const Container = styled.div`
     padding: 0 30px;
     margin: 0 auto;
     //margin: 0 auto 0 335px;
-    outline: 1px solid red;
+    //outline: 1px solid red;
     
     @media screen and (max-width: 768px) {
         padding: 0 15px;

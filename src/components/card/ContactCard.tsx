@@ -34,7 +34,6 @@ export const ContactCard = (props: ContactInfoPropsType) => {
 const StyledContactCard = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
     
     min-height: 210px;
@@ -65,6 +64,7 @@ const IconWrapper = styled.div`
 `;
 
 const Contacts = styled.div`
+    padding-top: 25px;
     display: flex;
     flex-direction: column;
     width: 100%;

@@ -86,13 +86,4 @@ export const GlobalStyle = createGlobalStyle`
     img {
         display: block;
     }
-    
-    input, textarea {
-        border: none;
-        background-color: ${theme.colors.secondaryBg};
-        resize: none;
-        padding: 8px;
-        font-size: 20px;
-        color: ${theme.colors.primaryFont};
-    }
 `;

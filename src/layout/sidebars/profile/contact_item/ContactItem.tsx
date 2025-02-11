@@ -1,31 +1,32 @@
 import styled from "styled-components";
-import {FlexWrapper} from "../../../../components/FlexWrapper.tsx";
 import {theme} from "../../../../slyles/Theme.ts";
 
 type ContactItemPropsType = {
     name: string,
-    value: string
+    value: string,
+    online?: boolean
 }
 
 export const ContactItem = (props: ContactItemPropsType) => {
     return (
         <StyledContactItem>
-            <FlexWrapper justify={"space-between"}>
-                <Name>{props.name}</Name>
-                <Value>{props.value}</Value>
-            </FlexWrapper>
+            <Name>{props.name}</Name>
+            <Value online={props.online || false}>{props.value}</Value>
         </StyledContactItem>
     );
 };
 
 const StyledContactItem = styled.div`
-    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 `;
 
 const Name = styled.span`
+    padding: 5px;
     background-color: ${theme.colors.accent};
 `;
 
-const Value = styled.span`
-    
+const Value = styled.span<{online: boolean}>`
+    color: ${props => props.online ? theme.colors.online : theme.colors.primaryFont};
 `;

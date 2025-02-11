@@ -37,6 +37,36 @@ const StyledActivityCard = styled.li`
     background-color: ${theme.colors.primaryBg};
     min-height: 160px;
     height: 100%;
+    
+    position: relative;
+    
+    & + & {
+        &::before {
+            content: "";
+            width: 100%;
+            height: 2px;
+            background-color: ${theme.colors.secondaryBg};
+            
+            top: 0;
+            bottom: 0;
+            
+            transform: translateY(-50%);
+
+            position: absolute;
+        }
+    }
+
+    & {
+        padding: 30px 0;
+    }
+
+    &:first-child {
+        padding: 0 0 30px;
+    }
+
+    &:last-child {
+        padding: 30px 0 0;
+    }
 `;
 
 const LeftPart = styled.div`

@@ -23,7 +23,7 @@ export const LeaveInfo = () => {
                 </FlexWrapper>
                 <FlexWrapper direction={'column'}>
                     <Label htmlFor={'message'}>Your message</Label>
-                    <TextArea id={'message'}/>
+                    <Field id={'message'} as={"textarea"}/>
                 </FlexWrapper>
                 <SendButton type={"submit"}>Send Message</SendButton>
             </StyledForm>
@@ -43,13 +43,17 @@ const StyledLeaveInfo = styled.section`
 const StyledForm = styled.form`
     display: flex;
     flex-direction: column;
-    min-height: 670px;
-    width: 100%;
-    height: 100%;
     gap: 25px;
+    min-height: 680px;
+    width: 100%;
     background-color: ${theme.colors.primaryBg};
     padding: 25px;
     margin-top: 50px;
+    
+    textarea {
+        min-height: 210px;
+        resize: none;
+    }
 `;
 
 const Label = styled.label`
@@ -58,17 +62,16 @@ const Label = styled.label`
 `;
 
 const Field = styled.input`
-    min-height: 50px;
-`;
-
-const TextArea = styled.textarea`
-    min-height: 210px;
+    border: none;
+    background-color: ${theme.colors.secondaryBg};
+    padding: 15px;
+    font-size: 20px;
+    color: ${theme.colors.primaryFont};
 `;
 
 const SendButton = styled(Button)`
     padding: 10px 24px;
     font-weight: 600;
-    min-height: 35px;
+    max-height: 35px;
     max-width: 170px;
-    
 `;

@@ -25,8 +25,6 @@ const CompoundFeedbackWrapper = styled.div`
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 30px;
-
-    min-height: 670px;
+    
     padding-bottom: 70px;
-    height: 100%;
 `;

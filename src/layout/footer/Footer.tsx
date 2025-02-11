@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import imgMap from "../../assets/images/map.webp"
 import {Icon} from "../../components/icon/Icon.tsx";
 import {Container} from "../../components/Container.tsx";
 import {theme} from "../../slyles/Theme.ts";
@@ -11,7 +10,11 @@ export const Footer = () => {
     return (
         <StyledFooter>
             <Container>
-                <StyledMap src={imgMap} alt={'map'}></StyledMap>
+                <StyledMap>
+                    <iframe
+                        src="https://yandex.by/map-widget/v1/?ll=27.727503%2C53.882847&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1MzAwMDExNxIc0JHQtdC70LDRgNGD0YHRjCwg0JzRltC90YHQuiIKDQ5y3EEVZpxXQg%2C%2C&z=11">
+                    </iframe>
+                </StyledMap>
                 <LogoWrapper>
                     <Icon iconId={'footerLogo1'} width={logoWidth} viewBox={logoViewBox}/>
                     <Icon iconId={'footerLogo2'} width={logoWidth} viewBox={logoViewBox}/>
@@ -19,8 +22,7 @@ export const Footer = () => {
                     <Icon iconId={'footerLogo4'} width={logoWidth} viewBox={logoViewBox}/>
                 </LogoWrapper>
                 <CopyrightWrapper>
-                    <Icon iconId={'copyright'} width={"24px"} viewBox={'0 0 24 24'}/>
-                    <Copyright>2025 All Rights Reserved.</Copyright>
+                    <Copyright><span>©</span>2025 All Rights Reserved.</Copyright>
                 </CopyrightWrapper>
             </Container>
         </StyledFooter>
@@ -28,13 +30,26 @@ export const Footer = () => {
 };
 
 const StyledFooter = styled.footer`
-    
+
 `;
 
-const StyledMap = styled.img`
-    max-width: calc(100vw - (100vw - 100%));
-    min-height: 300px;
-    object-fit: cover;
+const StyledMap = styled.div`
+    position:relative;
+    overflow:hidden;
+    
+    a {
+        color:#eee;
+        font-size:12px;
+        position:absolute;
+        top:0;
+    }
+    
+    iframe {
+        width: 100%;
+        min-height: 300px;
+        position: relative;
+        border: none;
+    }
 `;
 
 const LogoWrapper = styled.div`
@@ -49,13 +64,19 @@ const CopyrightWrapper = styled.div`
     justify-content: center;
     align-items: center;
     gap: 15px;
-    min-height: 60px;
     padding: 20px 40px;
     background-color: ${theme.colors.primaryBg}
 `;
 
 const Copyright = styled.small`
+    display: flex;
     font-size: 15px;
     line-height: 24px;
-    text-align: center;
+    align-items: center;
+    opacity: 0.8;
+    
+    span {
+        font-size: 1.7em;
+        padding-right: 10px;
+    }
 `;
