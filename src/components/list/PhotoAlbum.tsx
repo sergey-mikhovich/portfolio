@@ -1,11 +1,12 @@
-import {PhotoCard, PhotoCardPropsType} from "./card/PhotoCard.tsx";
+import {PhotoCard, PhotoCardPropsType} from "../card/photo_card/PhotoCard.tsx";
 import styled from "styled-components";
+import * as React from "react";
 
 type PhotoAlbumPropsType = {
     photos: Array<PhotoCardPropsType>
 }
 
-export const PhotoAlbum = (props: PhotoAlbumPropsType) => {
+export const PhotoAlbum: React.FC<PhotoAlbumPropsType> = (props: PhotoAlbumPropsType) => {
     return (
         <StyledPhotoAlbum>
             {props.photos.map((item) => (
@@ -21,7 +22,13 @@ export const PhotoAlbum = (props: PhotoAlbumPropsType) => {
 
 const StyledPhotoAlbum = styled.div`
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
     gap: 20px;
+    
+    &::after {
+        content: "";
+        width: 310px;
+        flex-grow: 1;
+    }
 `;

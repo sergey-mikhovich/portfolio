@@ -1,36 +1,8 @@
-import {FlexWrapper} from "../FlexWrapper.tsx";
 import styled from "styled-components";
-import {theme} from "../../slyles/Theme.ts";
+import {theme} from "../../../slyles/Theme.ts";
 
-export type ActivityItemPropsType = {
-    titleLeft: string
-    status: string
-    duration: string
-    titleRight: string
-    description: string
-}
-
-export const ActivityCard = (props: ActivityItemPropsType) => {
-    return (
-        <StyledActivityCard>
-            <LeftPart>
-                <Title>{props.titleLeft}</Title>
-                <FlexWrapper align={'center'}>
-                    <Status>{props.status}</Status>
-                    <Duration>{props.duration}</Duration>
-                </FlexWrapper>
-            </LeftPart>
-            <RightPart>
-                <Title>{props.titleRight}</Title>
-                <Description>{props.description}</Description>
-            </RightPart>
-        </StyledActivityCard>
-    );
-};
-
-const StyledActivityCard = styled.li`
+const ActivityCard = styled.li`
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
     gap: 30px;
     
@@ -73,9 +45,8 @@ const LeftPart = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: start;
-    max-width: 355px;
-    width: 100%;
-    height: 100%;
+    width: 355px;
+    flex-grow: 1;
 `;
 
 
@@ -85,8 +56,8 @@ const RightPart = styled.div`
     justify-content: space-between;
     align-items: start;
     
-    max-width: 505px;
-    width: 100%;
+    width: 505px;
+    flex-grow: 1;
 `;
 
 const Title = styled.h3`
@@ -113,3 +84,13 @@ const Duration = styled.span`
 const Description = styled.p`
     
 `;
+
+export const S = {
+    ActivityCard,
+    LeftPart,
+    RightPart,
+    Title,
+    Status,
+    Duration,
+    Description,
+}

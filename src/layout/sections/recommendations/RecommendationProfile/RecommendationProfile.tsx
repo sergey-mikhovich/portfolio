@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import {FlexWrapper} from "../../../../components/FlexWrapper.tsx";
-import {theme} from "../../../../slyles/Theme.ts";
+import {FlexWrapper} from "../../../../components/FlexWrapper.ts";
+import {S} from "./RecommendationProfile_Styles.ts";
+import * as React from "react";
 
 export type RecommendationProfilePropsType = {
     photo: string,
@@ -8,34 +8,15 @@ export type RecommendationProfilePropsType = {
     profession: string,
 }
 
-export const RecommendationProfile = (props: RecommendationProfilePropsType) => {
+export const RecommendationProfile: React.FC<RecommendationProfilePropsType> = (props: RecommendationProfilePropsType) => {
     return (
-        <StyledRecommendationProfile>
-            <StyledAvatar src={props.photo} alt="avatar"  />
+        <S.RecommendationProfile>
+            <S.Avatar src={props.photo} alt="avatar"  />
             <FlexWrapper direction={'column'} justify={'center'} align={"start"}>
-                <Name>{props.name}</Name>
-                <Profession>{props.profession}</Profession>
+                <S.Name>{props.name}</S.Name>
+                <S.Profession>{props.profession}</S.Profession>
             </FlexWrapper>
-        </StyledRecommendationProfile>
+        </S.RecommendationProfile>
     );
 };
-
-const StyledRecommendationProfile = styled.div`
-    display: flex;
-`;
-
-const StyledAvatar = styled.img`
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    margin-right: 15px;
-`;
-
-const Name = styled.h3`
-    margin-bottom: 5px;
-`;
-
-const Profession = styled.span`
-    color: ${theme.colors.secondaryFont};
-`;
 

@@ -1,77 +1,31 @@
-import styled from "styled-components";
 import {SectionTitle} from "../SectionTitle.tsx";
-import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
-import {Button} from "../../../components/button/Button.tsx";
-import {theme} from "../../../slyles/Theme.ts";
+import {FlexWrapper} from "../../../components/FlexWrapper.ts";
+import {S} from "./LeaveInfo_Styles.ts";
+import * as React from "react";
 
-export const LeaveInfo = () => {
+export const LeaveInfo: React.FC = () => {
     return (
-        <StyledLeaveInfo>
+        <S.LeaveInfo>
             <SectionTitle>Leave Us Your Info</SectionTitle>
-            <StyledForm>
+            <S.Form>
                 <FlexWrapper direction={'column'}>
-                    <Label htmlFor={'full_name'}>Your full name (Required)</Label>
-                    <Field id={'full_name'}/>
+                    <S.Label htmlFor={'full_name'}>Your full name (Required)</S.Label>
+                    <S.Field id={'full_name'}/>
                 </FlexWrapper>
                 <FlexWrapper direction={'column'}>
-                    <Label htmlFor={'email'}>Your email (Required)</Label>
-                    <Field id={'email'}/>
+                    <S.Label htmlFor={'email'}>Your email (Required)</S.Label>
+                    <S.Field id={'email'}/>
                 </FlexWrapper>
                 <FlexWrapper direction={'column'}>
-                    <Label htmlFor={'subject'}>Subject</Label>
-                    <Field id={'subject'}/>
+                    <S.Label htmlFor={'subject'}>Subject</S.Label>
+                    <S.Field id={'subject'}/>
                 </FlexWrapper>
                 <FlexWrapper direction={'column'}>
-                    <Label htmlFor={'message'}>Your message</Label>
-                    <Field id={'message'} as={"textarea"}/>
+                    <S.Label htmlFor={'message'}>Your message</S.Label>
+                    <S.Field id={'message'} as={"textarea"}/>
                 </FlexWrapper>
-                <SendButton type={"submit"}>Send Message</SendButton>
-            </StyledForm>
-        </StyledLeaveInfo>
+                <S.SendButton type={"submit"}>Send Message</S.SendButton>
+            </S.Form>
+        </S.LeaveInfo>
     );
 };
-
-const StyledLeaveInfo = styled.section`
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    background-color: ${theme.colors.secondaryBg};
-    max-width: 570px;
-    width: 100%;
-`;
-
-const StyledForm = styled.form`
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    min-height: 680px;
-    width: 100%;
-    background-color: ${theme.colors.primaryBg};
-    padding: 25px;
-    margin-top: 50px;
-    
-    textarea {
-        min-height: 210px;
-        resize: none;
-    }
-`;
-
-const Label = styled.label`
-    display: block;
-    margin-bottom: 8px;
-`;
-
-const Field = styled.input`
-    border: none;
-    background-color: ${theme.colors.secondaryBg};
-    padding: 15px;
-    font-size: 20px;
-    color: ${theme.colors.primaryFont};
-`;
-
-const SendButton = styled(Button)`
-    padding: 10px 24px;
-    font-weight: 600;
-    max-height: 35px;
-    max-width: 170px;
-`;

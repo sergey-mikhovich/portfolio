@@ -7,5 +7,19 @@ export const theme = {
 
         primaryFont: "#2B2B2B",
         secondaryFont: "#767676",
+    },
+
+    breakpoints: {
+        mobile: 576,
+        tablet: 768,
+        largeTablet: 992,
+        desktop: 1200
+    },
+
+    media: {
+        mobile: "screen and (max-width: 576px)",
+        tablet: "screen and (max-width: 768px)",
+        largeTablet: "screen and (max-width: 992px)",
+        desktop: "screen and (min-width: 992px)",
     }
 }

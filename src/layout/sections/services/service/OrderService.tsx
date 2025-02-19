@@ -1,7 +1,8 @@
 import styled from "styled-components";
-import {StyledSkill} from "./Service.tsx";
 import {theme} from "../../../../slyles/Theme.ts";
 import {Icon} from "../../../../components/icon/Icon.tsx";
+import {S} from "../Services_Styles.ts";
+import * as React from "react";
 
 type OrderServicePropsType = {
     title: string
@@ -9,7 +10,7 @@ type OrderServicePropsType = {
     actionText: string
 }
 
-export const OrderService = (props: OrderServicePropsType) => {
+export const OrderService: React.FC<OrderServicePropsType> = (props: OrderServicePropsType) => {
     return (
         <StyledOrderService>
             <Title>{props.title}</Title>
@@ -22,7 +23,10 @@ export const OrderService = (props: OrderServicePropsType) => {
     );
 };
 
-const StyledOrderService = styled(StyledSkill)`
+const StyledOrderService = styled(S.Service)`
+    min-width: 310px;
+    width: 310px;
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;

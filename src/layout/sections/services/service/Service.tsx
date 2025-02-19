@@ -1,7 +1,7 @@
-import styled from "styled-components";
 import {Icon} from "../../../../components/icon/Icon.tsx";
-import {theme} from "../../../../slyles/Theme.ts";
-import {FlexWrapper} from "../../../../components/FlexWrapper.tsx";
+import {FlexWrapper} from "../../../../components/FlexWrapper.ts";
+import { S } from "../Services_Styles.ts";
+import * as React from "react";
 
 type ServicePropsType = {
     iconId: string
@@ -9,31 +9,14 @@ type ServicePropsType = {
     description: string
 }
 
-export const Service = (props: ServicePropsType) => {
+export const Service: React.FC<ServicePropsType> = (props: ServicePropsType) => {
     return (
-        <StyledSkill>
+        <S.Service>
             <FlexWrapper direction={"column"} align={"center"} wrap={"wrap"}>
                 <Icon iconId={props.iconId} width={"74px"} viewBox={"0 0 74 74"}/>
-                <Title>{props.title}</Title>
-                <Description>{props.description}</Description>
+                <S.Title>{props.title}</S.Title>
+                <S.Description>{props.description}</S.Description>
             </FlexWrapper>
-        </StyledSkill>
+        </S.Service>
     );
 };
-
-
-export const StyledSkill = styled.div`
-    max-width: 310px;
-    width: 100%;
-    min-height: 230px;
-    background-color: ${theme.colors.primaryBg};
-    padding: 30px 25px 40px;
-`;
-
-const Title = styled.h3`
-    padding: 25px 0 15px;
-`;
-
-const Description = styled.p`
-    
-`;

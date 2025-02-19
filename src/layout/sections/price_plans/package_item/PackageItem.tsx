@@ -1,27 +1,17 @@
-import styled from "styled-components";
 import {Icon} from "../../../../components/icon/Icon.tsx";
-import {theme} from "../../../../slyles/Theme.ts";
+import {S} from "./PackageItem_Styles.ts";
+import * as React from "react";
 
 export type PackageItemPropsType = {
     included: boolean
     text: string
 }
 
-export const PackageItem = (props: PackageItemPropsType) => {
+export const PackageItem: React.FC<PackageItemPropsType> = (props: PackageItemPropsType) => {
     return (
-        <StyledPackageItem>
+        <S.PackageItem>
             <Icon iconId={props.included ? 'check' : 'close'} width={'24px'} viewBox={'0 0 24 24'}/>
-            <ServiceText>{props.text}</ServiceText>
-        </StyledPackageItem>
+            <S.Description>{props.text}</S.Description>
+        </S.PackageItem>
     );
 };
-
-const StyledPackageItem = styled.li`
-    display: flex;
-    align-items: center;
-    background-color: ${theme.colors.primaryBg};
-`;
-
-const ServiceText = styled.span`
-    padding-left: 15px;
-`;

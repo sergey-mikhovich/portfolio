@@ -19,8 +19,9 @@ export const GlobalStyle = createGlobalStyle`
         -moz-osx-font-smoothing: grayscale;
         
         color: ${theme.colors.primaryFont};
+        background-color: ${theme.colors.secondaryBg};
         line-height: 1.2;
-        
+        //min-width: 375px;
     }
 
     code {
@@ -52,13 +53,13 @@ export const GlobalStyle = createGlobalStyle`
         background-color: ${theme.colors.secondaryBg};
     }
 
-    section:not(section section) {
+    section {
         &:nth-child(n + 2) {
             padding: 140px 0 0;
         }
     }
     
-    h2 {
+    h1, h2 {
         font-weight: 700;
         font-size: 32px;
     }
