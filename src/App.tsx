@@ -10,14 +10,11 @@ import {Footer} from "./layout/footer/Footer.tsx";
 import {CompoundFeedback} from "./layout/sections/compound_feedback/CompoundFeedback.tsx";
 import {ProfileSidebar} from "./layout/sidebars/profile/ProfileSidebar.tsx";
 import {NavigationBar} from "./layout/sidebars/navigation/NavigationBar.tsx";
-import {Header} from "./layout/header/Header.tsx";
 import {S} from "./App_Styles.ts";
 
 export default function App() {
     return (
         <S.App>
-            <Header/>
-
             <S.ProfileSidebarWrapper>
                 <ProfileSidebar/>
             </S.ProfileSidebarWrapper>

@@ -17,6 +17,8 @@ const Foreground = styled.div`
     min-height: 470px;
     height: 100%;
 
+    position: relative;
+
     flex-wrap: wrap;
     background-color: ${theme.colors.primaryBg};
     padding: 0 60px;
@@ -77,6 +79,20 @@ const MainButton = styled(Button)`
     border-radius: 5px;
 `;
 
+const MenuWrapper = styled.div`
+    position: absolute;
+    
+    padding: 30px;
+    left: 0;
+    top: 0;
+    
+    display: none;
+
+    @media screen and (max-width: 1130px) {
+        display: block;
+    }
+`;
+
 export const S = {
     Main,
     Foreground,
@@ -86,5 +102,6 @@ export const S = {
     AccentTitle,
     Description,
     MainButton,
-    Photo
+    Photo,
+    MenuWrapper,
 }

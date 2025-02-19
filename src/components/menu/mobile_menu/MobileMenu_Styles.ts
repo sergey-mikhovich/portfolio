@@ -1,23 +1,7 @@
 import styled, {css} from "styled-components";
 import {theme} from "../../../slyles/Theme.ts";
-import {ProfileSidebar} from "../../sidebars/profile/ProfileSidebar.tsx";
-import * as React from "react";
 
-export const MobileMenu: React.FC = () => {
-    return (
-        <div>
-            <StyledBurgerButton isOpen={false}>
-                <span></span>
-            </StyledBurgerButton>
-
-            <MobileMenuPopup isOpen={false}>
-                <ProfileSidebar poppedUp/>
-            </MobileMenuPopup>
-        </div>
-    );
-};
-
-const StyledBurgerButton = styled.button<{isOpen: boolean}>`
+const BurgerButton = styled.button<{isOpen: boolean}>`
     width: 40px;
     height: 40px;
     position: relative;
@@ -57,7 +41,7 @@ const StyledBurgerButton = styled.button<{isOpen: boolean}>`
     }
 `;
 
-const MobileMenuPopup = styled.div<{isOpen: boolean}>`
+const Popup = styled.div<{isOpen: boolean}>`
     position: fixed;
     top: 0;
     left: 0;
@@ -72,3 +56,8 @@ const MobileMenuPopup = styled.div<{isOpen: boolean}>`
         width: 375px;
     }
 `;
+
+export const S ={
+    BurgerButton,
+    Popup,
+}
