@@ -43,13 +43,14 @@ const extraSkills = [
 ]
 
 type ProfileSidebarPropsType = {
-    poppedUp?: boolean
+    isOpen?: boolean,
+    onClose?: () => void
 }
 
 export const ProfileSidebar: React.FC<ProfileSidebarPropsType> = (props: ProfileSidebarPropsType) => {
     return (
         <S.ProfileSidebar>
-            <S.CloseButton hidden={!props.poppedUp}>
+            <S.CloseButton hidden={!(props.isOpen || false)} onClick={props.onClose}>
                 <span></span>
             </S.CloseButton>
             <S.SidebarWrapper>

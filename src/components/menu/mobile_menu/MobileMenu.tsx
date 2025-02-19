@@ -3,15 +3,16 @@ import * as React from "react";
 import {S} from "./MobileMenu_Styles.ts";
 
 export const MobileMenu: React.FC = () => {
+    const [isOpen, toggle] = React.useState(false);
     return (
-        <div>
-            <S.BurgerButton isOpen={false}>
+        <S.MobileMenu>
+            <S.BurgerButton onClick={() => toggle(true)}>
                 <span></span>
             </S.BurgerButton>
 
-            <S.Popup isOpen={false}>
-                <ProfileSidebar poppedUp/>
+            <S.Popup isOpen={isOpen}>
+                <ProfileSidebar isOpen={isOpen} onClose={() => toggle(false)} />
             </S.Popup>
-        </div>
+        </S.MobileMenu>
     );
 };

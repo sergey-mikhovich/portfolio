@@ -1,7 +1,11 @@
 import styled, {css} from "styled-components";
 import {theme} from "../../../slyles/Theme.ts";
 
-const BurgerButton = styled.button<{isOpen: boolean}>`
+const MobileMenu = styled.div`
+    
+`;
+
+const BurgerButton = styled.button`
     width: 40px;
     height: 40px;
     position: relative;
@@ -52,12 +56,13 @@ const Popup = styled.div<{isOpen: boolean}>`
         display: block;
     `}
     
-    & > aside {
+    aside {
         width: 375px;
     }
 `;
 
 export const S ={
+    MobileMenu,
     BurgerButton,
     Popup,
 }
