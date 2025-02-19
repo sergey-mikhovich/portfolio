@@ -105,6 +105,12 @@ const Links = styled.div`
         height: 24px;
         
         background-color: ${theme.colors.accent};
+        
+        transition: 1s;
+
+        &:hover {
+            transform: translateY(-5px);
+        }
     }
 `
 

@@ -1,4 +1,4 @@
-import {IconMenu} from "../../../components/menu/nav_menu/IconMenu.tsx";
+import {IconMenu} from "../../../components/menu/icon_menu/IconMenu.tsx";
 import {Icon} from "../../../components/icon/Icon.tsx";
 import * as React from "react";
 import {S} from "./NavigationBar_Styles.ts";

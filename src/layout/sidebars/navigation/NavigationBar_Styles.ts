@@ -20,8 +20,11 @@ const MenuWrapper = styled.div<{direction: string}>`
     menu a {
         width: 40px;
         height: 40px;
+        
+        transition: 1s; 
 
         &:hover {
+            transform: scale(1.3);
             background-color: ${theme.colors.accent};
             color: ${theme.colors.primaryFont};
         }

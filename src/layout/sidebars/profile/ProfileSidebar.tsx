@@ -5,7 +5,7 @@ import {ProgressItem} from "./items/progress_item/ProgressItem.tsx";
 import {ExtraSkill} from "./items/extra_skill/ExtraSkill.tsx";
 import * as React from "react";
 import {S} from "./ProfileSidebar_Styles.ts";
-import {IconMenu} from "../../../components/menu/nav_menu/IconMenu.tsx";
+import {IconMenu} from "../../../components/menu/icon_menu/IconMenu.tsx";
 
 const socialIconWidth = "14px"
 const socialIconViewBox = "0 0 14 14"
