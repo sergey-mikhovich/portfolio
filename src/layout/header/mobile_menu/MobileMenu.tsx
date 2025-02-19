@@ -11,7 +11,7 @@ export const MobileMenu: React.FC = () => {
             </StyledBurgerButton>
 
             <MobileMenuPopup isOpen={false}>
-                <ProfileSidebar popedUp/>
+                <ProfileSidebar poppedUp/>
             </MobileMenuPopup>
         </div>
     );
