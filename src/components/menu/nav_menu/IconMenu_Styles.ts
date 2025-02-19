@@ -1,14 +1,14 @@
 import styled from "styled-components";
 import {theme} from "../../../slyles/Theme.ts";
 
-const NavMenu = styled.div<{gap: string, direction: string}>`
+const IconMenu = styled.menu<{direction?: string, justify?: string, align?: string, gap?: string}>`
     width: 100%;
     ul {
         display: flex;
-        flex-direction: ${props => props.direction};
-        justify-content: center;
-        align-items: center;
-        gap: ${props => props.gap};
+        flex-direction: ${props => props.direction || "column"};
+        justify-content: ${props => props.justify || "center"};;
+        align-items: ${props => props.align || "center"};;
+        gap: ${props => props.gap || "0px"};
     }
 `;
 
@@ -26,18 +26,10 @@ const Link = styled.a.attrs((props) => ({
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    width: 40px;
-    height: 40px;
-    
-    &:hover {
-        background-color: ${theme.colors.accent};
-        color: ${theme.colors.primaryFont};
-    }
 `;
 
 export const S = {
-    NavMenu,
+    IconMenu,
     ListItem,
-    Link,
+    Link
 }

@@ -5,11 +5,19 @@ import {ProgressItem} from "./items/progress_item/ProgressItem.tsx";
 import {ExtraSkill} from "./items/extra_skill/ExtraSkill.tsx";
 import * as React from "react";
 import {S} from "./ProfileSidebar_Styles.ts";
+import {IconMenu} from "../../../components/menu/nav_menu/IconMenu.tsx";
 
 const socialIconWidth = "14px"
 const socialIconViewBox = "0 0 14 14"
 
-const linkIconIds = ["facebook", "instagram", "twitter", "linkedin", "youtube", "dribble"];
+const iconMenuItems = [
+    { iconId: 'facebook', title: "Facebook", href: '#', iconWidth: socialIconWidth, iconViewBox: socialIconViewBox },
+    { iconId: 'instagram', title: "Instagram", href: '#', iconWidth: socialIconWidth, iconViewBox: socialIconViewBox },
+    { iconId: 'twitter', title: "Twitter", href: '#', iconWidth: socialIconWidth, iconViewBox: socialIconViewBox },
+    { iconId: 'linkedin', title: "Linkedin", href: '#', iconWidth: socialIconWidth, iconViewBox: socialIconViewBox },
+    { iconId: 'youtube', title: "Youtube", href: '#', iconWidth: socialIconWidth, iconViewBox: socialIconViewBox },
+    { iconId: 'dribble', title: "Dribble", href: '#', iconWidth: socialIconWidth, iconViewBox: socialIconViewBox },
+]
 const contacts = [
         { name: "Age", value: "24" },
         { name: "Residence", value: "BD" },
@@ -51,11 +59,7 @@ export const ProfileSidebar: React.FC<ProfileSidebarPropsType> = (props: Profile
                 <S.Name>Sergey Mikhovich</S.Name>
                 <S.Occupation>Front-end Developer</S.Occupation>
                 <S.Links>
-                    {linkIconIds.map((iconId, index) => (
-                        <S.Link>
-                            <Icon key={index} iconId={iconId} width={socialIconWidth} viewBox={socialIconViewBox}/>
-                        </S.Link>
-                    ))}
+                    <IconMenu direction={"row"} justify={"space-between"} items={iconMenuItems}/>
                 </S.Links>
                 <S.Contacts>
                     {contacts.map((item, index) => (

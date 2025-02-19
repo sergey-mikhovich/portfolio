@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import {theme} from "../../slyles/Theme.ts";
 
 const Header = styled.header`
     position: absolute;
@@ -7,7 +6,7 @@ const Header = styled.header`
     padding: 30px 30px;
     display: none;
 
-    @media ${theme.media.largeTablet} {
+    @media screen and (max-width: 1130px) {
         display: block;
     }
 `;

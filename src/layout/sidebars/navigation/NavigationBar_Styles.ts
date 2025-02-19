@@ -11,11 +11,21 @@ const NavigationBar = styled.nav<{direction: string, padding: string}>`
     padding: ${props => props.padding};
 `;
 
-const NavMenuWrapper = styled.div<{direction: string}>`
+const MenuWrapper = styled.div<{direction: string}>`
     display: flex;
     flex-direction: ${props => props.direction};
     justify-content: center;
     flex-grow: 1;
+
+    menu a {
+        width: 40px;
+        height: 40px;
+
+        &:hover {
+            background-color: ${theme.colors.accent};
+            color: ${theme.colors.primaryFont};
+        }
+    }
 `;
 
 const ContrastButton = styled.button`
@@ -28,6 +38,6 @@ const ContrastButton = styled.button`
 
 export const S = {
     NavigationBar,
-    NavMenuWrapper,
+    MenuWrapper,
     ContrastButton,
 }

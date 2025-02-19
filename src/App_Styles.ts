@@ -55,16 +55,18 @@ const App = styled.div`
     }
     
     @media screen and (max-width: 992px) {
-        ${ProfileSidebarWrapper} {
-            display: none;
-        }
-        
         ${SideNavigationWrapper} { 
             display: none;
         }
 
         ${BottomNavigationWrapper} {
             display: block;
+        }
+    }
+
+    @media screen and (max-width: 1130px) {
+        ${ProfileSidebarWrapper} {
+            display: none;
         }
     }
 `
