@@ -44,9 +44,7 @@ export const GlobalStyle = createGlobalStyle`
     
     button {
         border: none;
-        
         cursor: pointer;
-        background-color: ${theme.colors.accent};
     }
     
     section, footer {

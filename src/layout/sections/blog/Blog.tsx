@@ -1,14 +1,14 @@
 import styled from "styled-components";
 import {SectionTitle} from "../SectionTitle.tsx";
 import {SectionDescription} from "../SectionDescription.tsx";
-import {PhotoAlbum} from "../../../components/list/PhotoAlbum.tsx";
+import {ProjectsAlbum} from "../../../components/list/ProjectsAlbum.tsx";
 import portfolio1 from "../../../assets/images/portfolio-1.webp";
 import portfolio2 from "../../../assets/images/portfolio-2.webp";
 import portfolio3 from "../../../assets/images/portfolio-3.webp";
 import {Container} from "../../../components/Container.ts";
 import * as React from "react";
 
-const photoItems = [
+const projects = [
     {
         photo: portfolio1,
         title: "How to make web templates",
@@ -36,7 +36,7 @@ export const Blog: React.FC = () => {
             <Container>
                 <SectionTitle>Blog</SectionTitle>
                 <SectionDescription>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. lorem ipsum</SectionDescription>
-                <PhotoAlbum photos={photoItems}/>
+                <ProjectsAlbum projects={projects}/>
             </Container>
         </StyledBlog>
     );

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import {theme} from "../../../slyles/Theme.ts";
 
-const PhotoCard = styled.div`
+const ProjectCard = styled.div`
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -72,7 +72,7 @@ const Link = styled.a`
 `;
 
 export const S = {
-    PhotoCard,
+    ProjectCard,
     IconButton,
     PhotoWrapper,
     Photo,
