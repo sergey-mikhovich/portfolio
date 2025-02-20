@@ -49,11 +49,13 @@ const Popup = styled.div<{isOpen: boolean}>`
     position: fixed;
     top: 0;
     left: 0;
+    width: 100%;
     z-index: 99999;
-    display: none;
+    transform: translateX(-100%);
+    transition: ${theme.animation.transition_0_4_easy_in_out};
     
     ${props => props.isOpen && css<{isOpen: boolean}>`
-        display: block;
+        transform: translateX(0);
     `}
     
     aside {
