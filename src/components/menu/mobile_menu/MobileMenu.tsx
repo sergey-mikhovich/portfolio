@@ -5,7 +5,7 @@ import {S} from "./MobileMenu_Styles.ts";
 export const MobileMenu: React.FC = () => {
     const [isOpen, toggle] = React.useState(false);
 
-    function popUpClick(event) {
+    function popUpClick(event: React.MouseEvent<HTMLDivElement>) {
         if (event.target === event.currentTarget) {
             toggle(false);
         }
