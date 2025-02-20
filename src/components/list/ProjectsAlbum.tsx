@@ -21,14 +21,7 @@ export const ProjectsAlbum: React.FC<ProjectsAlbumPropsType> = (props: ProjectsA
 };
 
 const StyledProjectsAlbum = styled.div`
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
     gap: 20px;
-    
-    &::after {
-        content: "";
-        width: 310px;
-        flex-grow: 1;
-    }
 `;
