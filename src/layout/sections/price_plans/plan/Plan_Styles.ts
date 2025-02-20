@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 import {theme} from "../../../../slyles/Theme.ts";
 import {Button} from "../../../../components/button/Button.tsx";
 
@@ -55,15 +55,37 @@ const PackageItems = styled.ul`
     }
 `
 
-const OrderButton = styled(Button)`
+const OrderButton = styled(Button)<{mostPopular: boolean}>`
     padding: 10px 40px;
     background-color: ${theme.colors.primaryBg};
     border-radius: 30px;
     box-shadow: 1px 0 10px 0 rgba(0, 0, 0, 0.15);
     font-weight: 700;
+    
+    ${props => props.mostPopular && css<{mostPopular: boolean}>`
+        animation: backgroundChange 1.2s infinite alternate, scaleChange 1.2s infinite alternate;
+    `}
 
     &:hover {
         background-color: ${theme.colors.accent};
+    }
+    
+    @keyframes backgroundChange {
+        from {
+            background-color: ${theme.colors.primaryBg};
+        }
+        to {
+            background-color: ${theme.colors.accent};
+        }
+    }
+
+    @keyframes scaleChange {
+        from {
+            transform: scale(0.9);
+        }
+        to {
+            transform: scale(1.1);
+        }
     }
 `;
 

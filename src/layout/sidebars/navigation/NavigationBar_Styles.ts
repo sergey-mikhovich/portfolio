@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 import {theme} from "../../../slyles/Theme.ts";
 
 const NavigationBar = styled.nav<{direction: string, padding: string}>`
@@ -6,29 +6,17 @@ const NavigationBar = styled.nav<{direction: string, padding: string}>`
     flex-direction: ${props => props.direction};
     background-color: ${theme.colors.primaryBg};
     
-    width: ${props => props.direction === "column" ? "105px" : "100%"};
-    height: 100%;
     padding: ${props => props.padding};
-`;
+    
+    ${props => props.direction === "column" && css`
+        height: 100%;
+        width: 105px;
+    `}
 
-const MenuWrapper = styled.div<{direction: string}>`
-    display: flex;
-    flex-direction: ${props => props.direction};
-    justify-content: center;
-    flex-grow: 1;
-
-    menu a {
-        width: 40px;
-        height: 40px;
-        
-        transition: 1s; 
-
-        &:hover {
-            transform: scale(1.3);
-            background-color: ${theme.colors.accent};
-            color: ${theme.colors.primaryFont};
-        }
-    }
+    ${props => props.direction === "row" && css`
+        width: 100%;
+        height: 80px;
+    `}
 `;
 
 const ContrastButton = styled.button`
@@ -41,6 +29,5 @@ const ContrastButton = styled.button`
 
 export const S = {
     NavigationBar,
-    MenuWrapper,
     ContrastButton,
 }

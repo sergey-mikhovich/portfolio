@@ -10,6 +10,10 @@ export const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
     }
     
+    html {
+        scroll-behavior: smooth;
+    }
+    
     body {
         margin: 0;
         font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

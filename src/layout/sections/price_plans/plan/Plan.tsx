@@ -28,7 +28,7 @@ export const Plan = (props: PlanPropsType) => {
                         />
                     ))}
                 </S.PackageItems>
-                <S.OrderButton>Order Now</S.OrderButton>
+                <S.OrderButton mostPopular={props.mostPopular}>Order Now</S.OrderButton>
             </S.MainContent>
         </S.Plan>
     );

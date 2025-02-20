@@ -12,27 +12,44 @@ const ProjectCard = styled.div`
 `;
 
 const IconButton = styled.button`
-    display: none;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 180, 0, 0.95);
+    background-color: transparent;
 `;
 
 const PhotoWrapper = styled.div`
+    position: relative;
     width: 100%;
     height: 100%;
     
+    ${IconButton} {
+        opacity: 0;
+        position: absolute;
+        left: 50%;
+        top: 60%;
+        transform: translate(-50%, -50%);
+        transition: ${theme.animation.transition_0_4_easy_in_out};
+    }
+    
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(255, 180, 0, 0.95);
+        opacity: 0;
+        transition: ${theme.animation.transition_0_4_easy_in_out};
+    }
+    
     &:hover {
-        position: relative;
-
+        &::before {
+            opacity: 1;
+            cursor: pointer;
+        }
+        
         ${IconButton} {
-            display: block;
-            position: absolute;
-
-            transform: translate(-50%, -50%);
-
+            opacity: 1;
             top: 50%;
-            left: 50%;
         }
     }
 `;

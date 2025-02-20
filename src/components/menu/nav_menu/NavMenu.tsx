@@ -1,8 +1,8 @@
 import {Icon} from "../../icon/Icon.tsx";
 import * as React from "react";
-import {S} from "./IconMenu_Styles.ts";
+import {S} from "./NavMenu_Styles.ts";
 
-type IconMenuItemsPropsType = {
+type NavMenuItemsPropsType = {
     href: string,
     iconId: string,
     title?: string,
@@ -10,17 +10,17 @@ type IconMenuItemsPropsType = {
     iconViewBox?: string
 }
 
-type IconMenuPropsType = {
-    items: Array<IconMenuItemsPropsType>,
+type NavMenuPropsType = {
+    items: Array<NavMenuItemsPropsType>,
     direction?: "row" | "column",
     gap?: string,
     justify?: string,
     align?: string,
 }
 
-export const IconMenu: React.FC<IconMenuPropsType> = (props: IconMenuPropsType) => {
+export const NavMenu: React.FC<NavMenuPropsType> = (props: NavMenuPropsType) => {
     return (
-        <S.IconMenu
+        <S.NavMenu
             direction={props.direction}
             justify={props.justify}
             align={props.align}
@@ -34,6 +34,6 @@ export const IconMenu: React.FC<IconMenuPropsType> = (props: IconMenuPropsType) 
                     </S.ListItem>
                 ))}
             </ul>
-        </S.IconMenu>
+        </S.NavMenu>
     );
 };

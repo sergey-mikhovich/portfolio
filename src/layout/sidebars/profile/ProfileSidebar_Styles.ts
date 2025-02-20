@@ -93,25 +93,28 @@ const Occupation = styled.span`
     color: ${theme.colors.secondaryFont};
 `;
 
+const Link = styled.a`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    background-color: ${theme.colors.accent};
+    border-radius: 50%;
+
+    transition: ${theme.animation.transition_0_4_easy_in_out};
+
+    &:hover {
+        transform: translateY(-4px);
+    }
+`;
+
 const Links = styled.div`
     display: flex;
     justify-content: space-between;
     width: 100%;
     height: 100%;
     margin: 15px 0 50px;
-
-    menu a {
-        width: 24px;
-        height: 24px;
-        
-        background-color: ${theme.colors.accent};
-        
-        transition: 1s;
-
-        &:hover {
-            transform: translateY(-5px);
-        }
-    }
 `
 
 const Contacts = styled.div`
@@ -173,6 +176,7 @@ export const S = {
     PhotoWrapper,
     Name,
     Occupation,
+    Link,
     Links,
     Contacts,
     Languages,
