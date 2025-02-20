@@ -31,7 +31,7 @@ const contactItems = [
 
 export const ContactInfo = () => {
     return (
-        <S.ContactInfo>
+        <S.ContactInfo id={"contacts"}>
             <SectionTitle>Contact Info</SectionTitle>
             <S.Contacts>
                 {contactItems.map((item, index) => (

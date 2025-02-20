@@ -7,7 +7,7 @@ import {MobileMenu} from "../../../components/menu/mobile_menu/MobileMenu.tsx";
 
 export const Main : React.FC = () => {
     return (
-        <S.Main>
+        <S.Main id={"home"}>
             <Container>
                 <S.Foreground>
                     <S.MenuWrapper>

@@ -32,7 +32,7 @@ const projects = [
 
 export const Blog: React.FC = () => {
     return (
-        <StyledBlog>
+        <StyledBlog id={"blog"}>
             <Container>
                 <SectionTitle>Blog</SectionTitle>
                 <SectionDescription>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. lorem ipsum</SectionDescription>

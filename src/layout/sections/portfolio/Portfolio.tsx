@@ -65,7 +65,7 @@ export const Portfolio: React.FC = () => {
     }
 
     return (
-        <S.Portfolio>
+        <S.Portfolio id={"portfolio"}>
             <Container>
                 <SectionTitle>Portfolio</SectionTitle>
                 <SectionDescription>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. lorem ipsum</SectionDescription>

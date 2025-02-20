@@ -53,8 +53,14 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     section {
-        &:nth-child(n + 2) {
-            padding: 140px 0 0;
+        padding-bottom: 70px;
+        
+        &:nth-child(1) {
+            padding-bottom: 140px;
+        }
+        
+        &:nth-last-child(-n + 2) {
+            padding-bottom: 0;
         }
     }
     

@@ -6,6 +6,7 @@ const ContactInfo = styled.section`
     flex-direction: column;
     width: 100%;
     background-color: ${theme.colors.secondaryBg};
+    padding: 0;
 `;
 
 const Contacts = styled.div`

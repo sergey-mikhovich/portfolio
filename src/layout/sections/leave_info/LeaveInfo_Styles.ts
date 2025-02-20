@@ -8,6 +8,7 @@ const LeaveInfo = styled.section`
     background-color: ${theme.colors.secondaryBg};
     //max-width: 570px;
     width: 100%;
+    padding: 0;
 `;
 
 const Form = styled.form`

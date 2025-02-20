@@ -7,12 +7,12 @@ const iconWidth = "18px"
 const iconViewBox = "0 0 18 18"
 
 const iconMenuItems = [
-    { iconId: 'home', title: "Home", href: '#', iconWidth: iconWidth, iconViewBox: iconViewBox },
-    { iconId: 'file', title: "File", href: '#', iconWidth: iconWidth, iconViewBox: iconViewBox },
-    { iconId: 'cv', title: "CV", href: '#', iconWidth: iconWidth, iconViewBox: iconViewBox },
-    { iconId: 'portfolio', title: "Portfolio", href: '#', iconWidth: iconWidth, iconViewBox: iconViewBox },
-    { iconId: 'blog', title: "Blog", href: '#', iconWidth: iconWidth, iconViewBox: iconViewBox },
-    { iconId: 'contact', title: "Contact", href: '#', iconWidth: iconWidth, iconViewBox: iconViewBox },
+    { iconId: 'home', title: "Home", href: 'home', iconWidth: iconWidth, iconViewBox: iconViewBox },
+    { iconId: 'file', title: "Services", href: 'services', iconWidth: iconWidth, iconViewBox: iconViewBox },
+    { iconId: 'cv', title: "Education", href: 'education', iconWidth: iconWidth, iconViewBox: iconViewBox },
+    { iconId: 'portfolio', title: "Portfolio", href: 'portfolio', iconWidth: iconWidth, iconViewBox: iconViewBox },
+    { iconId: 'blog', title: "Blog", href: "blog", iconWidth: iconWidth, iconViewBox: iconViewBox },
+    { iconId: 'contact', title: "Contacts", href: "contacts", iconWidth: iconWidth, iconViewBox: iconViewBox },
 ]
 
 type NavigationBarPropsType = {

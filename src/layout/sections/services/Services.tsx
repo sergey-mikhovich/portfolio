@@ -41,7 +41,7 @@ const serviceItems = [
 
 export const Services: React.FC = () => {
     return (
-        <S.Services>
+        <S.Services id={"services"}>
             <Container>
                 <SectionTitle>My Services</SectionTitle>
                 <SectionDescription>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. lorem ipsum</SectionDescription>

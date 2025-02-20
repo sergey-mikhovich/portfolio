@@ -28,7 +28,7 @@ export const IconMenu: React.FC<IconMenuPropsType> = (props: IconMenuPropsType) 
             <ul>
                 {props.items.map((item, index) => (
                     <S.ListItem key={index}>
-                        <S.Link title={item.title} href={item.href}>
+                        <S.Link title={item.title} href={`#${item.href}`}>
                             <Icon iconId={item.iconId} width={item.iconWidth} viewBox={item.iconViewBox} />
                         </S.Link>
                     </S.ListItem>
