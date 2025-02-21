@@ -2,7 +2,7 @@ import styled from "styled-components";
 import {theme} from "./slyles/Theme.ts";
 
 const ProfileSidebarWrapper = styled.div`
-    height: 100vh;
+    //height: 100vh;
     //
     position: sticky;
     top: 0;

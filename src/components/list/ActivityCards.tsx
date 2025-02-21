@@ -2,6 +2,7 @@ import {ActivityCard, ActivityCardPropsType} from "../card/activity_card/Activit
 import styled from "styled-components";
 import {theme} from "../../slyles/Theme.ts";
 import * as React from "react";
+import {Fade} from "react-awesome-reveal";
 
 type ActivityCardsPropsType = {
     items: Array<ActivityCardPropsType>
@@ -10,14 +11,16 @@ type ActivityCardsPropsType = {
 export const ActivityCards: React.FC<ActivityCardsPropsType> = (props: ActivityCardsPropsType) => {
     return (
         <StyledActivityCards>
-            { props.items.map(item => (
-                <ActivityCard
-                    titleLeft={item.titleLeft}
-                    status={item.status}
-                    duration={item.duration}
-                    titleRight={item.titleRight}
-                    description={item.description}/>
-            ))}
+            <Fade direction={"down"} cascade damping={0.05} triggerOnce>
+                { props.items.map(item => (
+                    <ActivityCard
+                        titleLeft={item.titleLeft}
+                        status={item.status}
+                        duration={item.duration}
+                        titleRight={item.titleRight}
+                        description={item.description}/>
+                ))}
+            </Fade>
         </StyledActivityCards>
     );
 };

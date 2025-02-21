@@ -5,6 +5,7 @@ import {Container} from "../../../components/Container.ts";
 import * as React from "react";
 import {S} from "./Services_Styles.ts";
 import {GridWrapper} from "../../../components/GridWrapper.ts";
+import {Fade} from "react-awesome-reveal";
 
 const serviceItems = [
     {
@@ -46,14 +47,16 @@ export const Services: React.FC = () => {
                 <SectionTitle>My Services</SectionTitle>
                 <SectionDescription>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. lorem ipsum</SectionDescription>
                 <GridWrapper templateColumns={"repeat(auto-fill, minmax(310px, 1fr))"} gap={"20px"}>
-                    {serviceItems.map((item, index) => (
-                        <Service
-                            key = {index}
-                            iconId={item.iconId}
-                            title={item.title}
-                            description={item.description}
-                            actionText={item.actionText}/>
-                    ))}
+                    <Fade direction={"down"} cascade damping={0.05} triggerOnce>
+                        {serviceItems.map((item, index) => (
+                            <Service
+                                key = {index}
+                                iconId={item.iconId}
+                                title={item.title}
+                                description={item.description}
+                                actionText={item.actionText}/>
+                        ))}
+                    </Fade>
                 </GridWrapper>
             </Container>
         </S.Services>
