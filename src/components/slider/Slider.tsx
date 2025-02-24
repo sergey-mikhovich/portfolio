@@ -3,6 +3,43 @@ import {FlexWrapper} from "../FlexWrapper.ts";
 import {theme} from "../../slyles/Theme.ts";
 import * as React from "react";
 
+
+
+// const responsive = {
+//     0: {
+//         items: 1,
+//     },
+//     687: {
+//         items: 2,
+//     },
+//     1047: {
+//         items: 3
+//     }
+// }
+//
+// export const Slider = (props: {items: any[]}) => (
+//     <StyledSlider>
+//         <AliceCarousel
+//             mouseTracking
+//             items={props.items}
+//             responsive={responsive}
+//             controlsStrategy={"responsive"}
+//             disableButtonsControls
+//         />
+//     </StyledSlider>
+// )
+//
+// const StyledSlider = styled.div`
+//     width: 100%;
+//
+//     .alice-carousel__stage-item {
+//         padding: 0 10px;
+//     }
+// `;
+
+
+
+
 export const Slider: React.FC = () => {
     return (
         <StyledSlider>

@@ -1,4 +1,3 @@
-import {FlexWrapper} from "../../../../components/FlexWrapper.ts";
 import {
     RecommendationProfile,
     RecommendationProfilePropsType
@@ -17,26 +16,24 @@ type RecommendationsPropsType = {
 export const Recommendation: React.FC<RecommendationsPropsType> = (props: RecommendationsPropsType) => {
     return (
         <S.Recommendation>
-            <FlexWrapper direction={"column"} align={"flex-start"}>
-                <S.Stars>
-                    {
-                        Array(props.rating).map((_, index) => (
-                            <Icon
-                                key={index}
-                                iconId={"star"}
-                                width={"18px"}
-                                viewBox={"0 0 18 18"}
-                            />
-                        ))
-                    }
-                </S.Stars>
-                <S.Title>{props.title}</S.Title>
-                <S.Description>{props.description}</S.Description>
-                <RecommendationProfile
-                    photo={props.profile.photo}
-                    name={props.profile.name}
-                    profession={props.profile.profession}/>
-            </FlexWrapper>
+            <S.Stars>
+                {
+                    Array(props.rating).map((_, index) => (
+                        <Icon
+                            key={index}
+                            iconId={"star"}
+                            width={"18px"}
+                            viewBox={"0 0 18 18"}
+                        />
+                    ))
+                }
+            </S.Stars>
+            <S.Title>{props.title}</S.Title>
+            <S.Description>{props.description}</S.Description>
+            <RecommendationProfile
+                photo={props.profile.photo}
+                name={props.profile.name}
+                profession={props.profile.profession}/>
         </S.Recommendation>
     );
 };

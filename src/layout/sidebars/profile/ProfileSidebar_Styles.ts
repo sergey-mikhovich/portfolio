@@ -3,7 +3,7 @@ import {theme} from "../../../slyles/Theme.ts";
 import {Button} from "../../../components/button/Button.tsx";
 
 const ProfileSidebar = styled.aside`
-    width: 305px;
+    width: 100%;
     background-color: ${theme.colors.primaryBg};
     padding: 50px 40px;
     
@@ -14,8 +14,7 @@ const SidebarWrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: start;
-    width: 220px;
+    justify-content: start;;
     
     margin: 0 auto;
 `;

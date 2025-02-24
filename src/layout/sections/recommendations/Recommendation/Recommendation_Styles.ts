@@ -2,6 +2,9 @@ import styled from "styled-components";
 import {theme} from "../../../../slyles/Theme.ts";
 
 const Recommendation = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     max-width: 310px;
     width: 100%;
     min-height: 320px;
